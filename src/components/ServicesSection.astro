@@ -1,0 +1,62 @@
+---
+import ServiceCard from './ui/ServiceCard.astro';
+
+// Placeholder data - In a real app, this might come from a CMS
+const services = [
+  {
+    title: "Hybrid Laser Cutting",
+    description: "Rapid local prototyping for NPI, seamless transition to global volume production. 10kW Fiber laser precision for steel and aluminum.",
+    image: "https://placehold.co/600x400/355D9A/white?text=Laser+Cutting",
+    href: "/services/laser-cutting"
+  },
+  {
+    title: "Scalable CNC Bending",
+    description: "Complex forming with guaranteed repeatability. We handle everything from single custom brackets to 50,000-unit production runs.",
+    image: "https://placehold.co/600x400/355D9A/white?text=CNC+Bending",
+    href: "/services/bending"
+  },
+  {
+    title: "Turnkey Assembly",
+    description: "End-to-end mechanical assembly. We manage the BOM, sourcing, and logistics so you receive finished goods ready for your line.",
+    image: "https://placehold.co/600x400/355D9A/white?text=Welding",
+    href: "/services/welding"
+  }
+];
+---
+
+<section id="services" class="py-24 bg-gray-50">
+  <div class="container mx-auto px-6 md:px-20">
+    <!-- Header -->
+    <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+      <div class="max-w-2xl">
+        <h2 class="font-montserrat font-bold text-4xl md:text-5xl mb-6">From Prototype to Global Scale</h2>
+        <p class="font-poppins text-gray-600 text-lg">
+          We don't just cut parts; we build supply chains. Access unlimited capacity without compromising on quality or lead time.
+        </p>
+      </div>
+      
+      <!-- View All Button (Hidden on mobile to save space, or kept if essential) -->
+      <a href="/services" class="hidden md:inline-block font-poppins font-semibold text-primary border-b-2 border-primary pb-1 hover:text-opacity-80">
+        View All Capabilities
+      </a>
+    </div>
+
+    <!-- Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {services.map(service => (
+        <ServiceCard 
+          title={service.title}
+          description={service.description}
+          imageSrc={service.image}
+          href={service.href}
+        />
+      ))}
+    </div>
+    
+    <div class="mt-12 text-center md:hidden">
+         <a href="/services" class="font-poppins font-semibold text-primary border-b-2 border-primary pb-1">
+            View All Capabilities
+          </a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,102 @@
+---
+import Button from './ui/Button.astro';
+---
+
+<section class="py-24 bg-gray-900 text-white relative overflow-hidden">
+  <!-- Background Pattern -->
+  <div class="absolute inset-0 opacity-10 pointer-events-none">
+    <svg class="h-full w-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <path d="M0 100 L100 0" stroke="white" stroke-width="0.5" />
+      <path d="M0 0 L100 100" stroke="white" stroke-width="0.5" />
+    </svg>
+  </div>
+
+  <div class="container mx-auto px-6 md:px-20 relative z-10">
+    <div class="text-center max-w-4xl mx-auto mb-16">
+      <h2 class="font-montserrat font-bold text-4xl md:text-5xl mb-6">The Economics of Global. The Safety of Local.</h2>
+      <p class="font-poppins text-gray-400 text-lg">
+        Stop choosing between low unit costs and supply chain security. Our hybrid model gives you both.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+      
+      <!-- Global Card -->
+      <div class="bg-gray-800 rounded-3xl p-8 md:p-12 border border-gray-700 hover:border-blue-500 transition duration-300 group">
+        <div class="flex items-center gap-4 mb-8">
+          <div class="w-12 h-12 bg-blue-900 rounded-full flex items-center justify-center text-blue-400 font-bold text-xl">
+            1
+          </div>
+          <h3 class="font-montserrat font-bold text-2xl">Global Scale</h3>
+        </div>
+        
+        <ul class="space-y-6 font-poppins text-gray-300 mb-10">
+            <li class="flex items-start gap-4">
+                <span class="text-blue-400 mt-1">✓</span>
+                <div>
+                    <strong class="text-white block">LCL Cost Structure</strong>
+                    Access globally competitive pricing for high-volume production runs.
+                </div>
+            </li>
+            <li class="flex items-start gap-4">
+                <span class="text-blue-400 mt-1">✓</span>
+                <div>
+                    <strong class="text-white block">Infinite Capacity</strong>
+                    Scale from 1,000 to 100,000 units without bottlenecks.
+                </div>
+            </li>
+            <li class="flex items-start gap-4">
+                <span class="text-blue-400 mt-1">✓</span>
+                <div>
+                    <strong class="text-white block">ISO Certified Partners</strong>
+                    Managed directly by our Canadian engineering team.
+                </div>
+            </li>
+        </ul>
+      </div>
+
+      <!-- Domestic Card -->
+      <div class="bg-white text-gray-900 rounded-3xl p-8 md:p-12 border-4 border-primary relative transform lg:-ml-4 lg:mt-12 shadow-2xl">
+        <div class="absolute -top-6 right-8 bg-primary text-white px-4 py-1 rounded-full text-sm font-bold uppercase tracking-wider">
+            Your Safety Net
+        </div>
+        
+        <div class="flex items-center gap-4 mb-8">
+          <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary font-bold text-xl">
+            2
+          </div>
+          <h3 class="font-montserrat font-bold text-2xl">Domestic Security</h3>
+        </div>
+
+        <ul class="space-y-6 font-poppins text-gray-600 mb-10">
+            <li class="flex items-start gap-4">
+                <span class="text-primary mt-1 font-bold">✓</span>
+                <div>
+                    <strong class="text-black block">Risk Insurance</strong>
+                    If global shipping fails, our GTA facility takes over production immediately.
+                </div>
+            </li>
+            <li class="flex items-start gap-4">
+                <span class="text-primary mt-1 font-bold">✓</span>
+                <div>
+                    <strong class="text-black block">Local Warehousing</strong>
+                    We hold safety stock in Toronto for JIT (Just-In-Time) delivery.
+                </div>
+            </li>
+            <li class="flex items-start gap-4">
+                <span class="text-primary mt-1 font-bold">✓</span>
+                <div>
+                    <strong class="text-black block">Rapid Prototyping</strong>
+                    Validate designs locally in days, not weeks.
+                </div>
+            </li>
+        </ul>
+        
+        <div class="text-center">
+             <Button href="#contact" variant="primary">How It Works</Button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

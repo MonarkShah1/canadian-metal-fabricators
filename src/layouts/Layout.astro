@@ -1,0 +1,75 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+  canonicalURL?: string;
+  type?: 'website' | 'article';
+}
+
+const { 
+  title, 
+  description = "Canadian Metal Fabricators (CMF) - Your ISO 9001:2015 certified hybrid supply chain partner. Domestic speed, global scale.", 
+  image = "/images/og-default.jpg",
+  canonicalURL = Astro.site 
+    ? new URL(Astro.url.pathname, Astro.site).href 
+    : Astro.url.href,
+  type = 'website' 
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- SEO Metadata -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content={type} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonicalURL} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={image} />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Pacifico&family=Poppins:wght@400;500;600&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Schema.org (Organization) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Canadian Metal Fabricators",
+        "url": "https://cmfab.ca",
+        "logo": "https://cmfab.ca/logo.png",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+1-416-555-0123",
+          "contactType": "sales",
+          "areaServed": "CA"
+        }
+      }
+    </script>
+  </head>
+  <body class="bg-white text-black flex flex-col min-h-screen">
+    <slot />
+  </body>
+</html>

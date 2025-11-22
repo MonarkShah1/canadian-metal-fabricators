@@ -1,0 +1,26 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/Hero.astro';
+import QualityDashboard from '../components/QualityDashboard.astro';
+import HybridModelSection from '../components/HybridModelSection.astro';
+import ControlTowerSection from '../components/ControlTowerSection.astro';
+import ServicesSection from '../components/ServicesSection.astro';
+import ValuePropSection from '../components/ValuePropSection.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Canadian Metal Fabricators | Hybrid Supply Chain Partner">
+	<Navbar />
+	
+	<main>
+		<Hero />
+		<QualityDashboard /> <!-- Replaced IndustriesSection for Data-Driven Trust -->
+		<HybridModelSection />
+		<ControlTowerSection />
+		<ValuePropSection /> 
+		<ServicesSection />
+	</main>
+
+	<Footer />
+</Layout>

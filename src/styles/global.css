@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@theme {
+  --font-montserrat: 'Montserrat', sans-serif;
+  --font-poppins: 'Poppins', sans-serif;
+  --font-mono: 'Roboto Mono', monospace;
+  --font-pacifico: 'Pacifico', cursive;
+
+  --color-primary: #355D9A;
+  --color-slate-900: #0F172A;
+  --color-zinc-100: #F1F5F9;
+  --color-secondary: #000000;
+  --color-accent: #FFFFFF;
+}
+
+body {
+  font-family: var(--font-poppins);
+}

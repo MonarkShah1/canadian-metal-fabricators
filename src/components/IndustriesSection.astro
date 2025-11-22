@@ -1,0 +1,69 @@
+---
+const industries = [
+  { name: "Aerospace", icon: "✈️" },
+  { name: "Automotive", icon: "🚗" },
+  { name: "Energy", icon: "⚡" },
+  { name: "Automation", icon: "🤖" },
+  { name: "Medical", icon: "🏥" },
+  { name: "Defense", icon: "🛡️" }
+];
+
+const certifications = [
+  "ISO 9001:2015 Certified",
+  "CWB W47.1 Fusion Welding",
+  "Controlled Goods Program (CGP)",
+  "NEMA Rated Enclosures"
+];
+---
+
+<section class="py-12 bg-white border-b border-gray-100">
+  <div class="container mx-auto px-6 md:px-20">
+    
+    <div class="flex flex-col md:flex-row items-center justify-between gap-8 mb-12">
+        <p class="font-montserrat font-bold text-gray-400 uppercase tracking-widest text-sm">Trusted By Leaders In</p>
+        <div class="h-px bg-gray-200 flex-grow hidden md:block"></div>
+    </div>
+
+    <!-- Industries Grid -->
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 text-center opacity-70 hover:opacity-100 transition duration-300">
+      {industries.map(industry => (
+        <div class="group cursor-default">
+          <div class="text-4xl mb-3 group-hover:scale-110 transition duration-300">{industry.icon}</div>
+          <h3 class="font-poppins font-semibold text-gray-800">{industry.name}</h3>
+        </div>
+      ))}
+    </div>
+
+    <!-- Scrolling Marquee for Certs -->
+    <div class="mt-16 bg-gray-50 rounded-xl p-4 overflow-hidden relative">
+      <div class="flex animate-marquee whitespace-nowrap gap-16 items-center">
+        {certifications.map(cert => (
+          <span class="font-montserrat font-bold text-gray-500 flex items-center gap-2">
+            <span class="text-primary">★</span> {cert}
+          </span>
+        ))}
+         {certifications.map(cert => (
+          <span class="font-montserrat font-bold text-gray-500 flex items-center gap-2">
+            <span class="text-primary">★</span> {cert}
+          </span>
+        ))}
+         {certifications.map(cert => (
+          <span class="font-montserrat font-bold text-gray-500 flex items-center gap-2">
+            <span class="text-primary">★</span> {cert}
+          </span>
+        ))}
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+</style>
