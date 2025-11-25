@@ -1,18 +1,34 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@theme {
-  --font-montserrat: 'Montserrat', sans-serif;
-  --font-poppins: 'Poppins', sans-serif;
-  --font-mono: 'Roboto Mono', monospace;
-  --font-pacifico: 'Pacifico', cursive;
-
-  --color-primary: #355D9A;
-  --color-slate-900: #0F172A;
-  --color-zinc-100: #F1F5F9;
-  --color-secondary: #000000;
-  --color-accent: #FFFFFF;
+@layer base {
+  body {
+    @apply bg-background text-slate-300 font-poppins selection:bg-primary selection:text-white;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-montserrat font-bold text-white;
+  }
+  h1 {
+    @apply text-5xl md:text-7xl leading-tight tracking-tight;
+  }
+  h2 {
+    @apply text-3xl md:text-5xl leading-tight tracking-tight;
+  }
 }
 
-body {
-  font-family: var(--font-poppins);
+/* Scroll Animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.glass {
+    @apply bg-slate-900/70 backdrop-blur-md border border-white/10;
 }

@@ -1,28 +1,48 @@
 ---
 ---
-<nav class="w-full bg-white px-20 py-3 flex justify-between items-center fixed top-0 left-0 z-50 border-b border-gray-100">
-  <!-- Logo -->
-  <div class="flex items-center gap-1">
-    <span class="font-pacifico text-xl">LOGO</span>
+<nav class="w-full sticky top-0 left-0 z-50 backdrop-blur-md bg-slate-950/90 border-b border-slate-900 transition-all duration-300" id="navbar">
+  <div class="container mx-auto px-6 md:px-12 py-4 flex justify-between items-center">
+    <!-- Logo -->
+    <a href="/" class="flex items-center gap-2 group">
+      <span class="font-montserrat font-bold text-2xl text-white tracking-tight group-hover:text-primary transition">CMF</span>
+    </a>
+
+    <!-- Desktop Links -->
+    <div class="hidden md:flex items-center gap-8">
+      <a href="/" class="text-sm font-medium text-slate-300 hover:text-white transition">Home</a>
+      <a href="#services" class="text-sm font-medium text-slate-300 hover:text-white transition">Services</a>
+      <a href="#hybrid" class="text-sm font-medium text-slate-300 hover:text-white transition">Hybrid Model</a>
+      <a href="#contact" class="bg-primary text-white font-semibold text-sm px-6 py-2.5 rounded-full hover:bg-primary-dark transition shadow-lg shadow-primary/20">
+        Get a Quote
+      </a>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-8 h-8">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+      </svg>
+    </button>
   </div>
 
-  <!-- Links -->
-  <div class="hidden md:flex items-center gap-8">
-    <a href="#" class="font-poppins text-lg text-black hover:text-primary">Home</a>
-    <a href="#services" class="font-poppins text-lg text-black hover:text-primary">Services</a>
-    <a href="#" class="font-poppins text-lg text-black hover:text-primary">Blog</a>
-    <a href="#" class="font-poppins text-lg text-black hover:text-primary">About Us</a>
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu" class="fixed inset-0 z-40 bg-slate-950 pt-24 px-6 hidden flex-col gap-8 h-screen border-t border-slate-900">
+     <a href="/" class="font-montserrat font-bold text-2xl text-white">Home</a>
+     <a href="#services" class="font-montserrat font-bold text-2xl text-white">Services</a>
+     <a href="#hybrid" class="font-montserrat font-bold text-2xl text-white">Hybrid Model</a>
+     <a href="#contact" class="bg-primary text-white font-bold text-center py-4 rounded-xl">Get a Quote</a>
   </div>
-
-  <!-- CTA -->
-  <a href="#contact" class="hidden md:block bg-primary text-white font-poppins font-semibold text-lg px-6 py-3 rounded-full hover:bg-opacity-90 transition">
-    Contact Us
-  </a>
-
-  <!-- Mobile Menu Button (Placeholder) -->
-  <button class="md:hidden text-black">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-    </svg>
-  </button>
 </nav>
+
+<script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  
+  if (btn && menu) {
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+      menu.classList.toggle('flex');
+      document.body.classList.toggle('overflow-hidden'); // Prevent scrolling
+    });
+  }
+</script>

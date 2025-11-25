@@ -1,65 +1,78 @@
 ---
 ---
 
-<section class="bg-slate-900 py-16 text-white border-t border-slate-800">
-  <div class="container mx-auto px-6 md:px-20">
+<section class="py-24 bg-slate-950 border-t border-slate-900">
+  <div class="container mx-auto px-6 md:px-12">
     
-    <div class="flex flex-col md:flex-row items-end justify-between gap-6 mb-12">
+    <div class="flex flex-col md:flex-row items-end justify-between gap-6 mb-16 reveal">
         <div>
-            <span class="font-mono text-blue-400 text-sm tracking-widest uppercase mb-2 block">Performance Metrics (Q3 2025)</span>
-            <h2 class="font-montserrat font-bold text-3xl">Engineering Transparency</h2>
+            <span class="font-mono text-primary text-sm tracking-widest uppercase mb-2 block">Live Performance Data</span>
+            <h2>Engineering Transparency</h2>
         </div>
-        <p class="font-poppins text-slate-400 max-w-xl text-right">
-            We don't just promise quality; we track it. Our live KPIs demonstrate the stability of our hybrid supply chain.
+        <p class="max-w-xl text-right text-slate-400">
+            We don't hide behind sales reps. Access real-time quality metrics and capacity data directly from our manufacturing floor.
         </p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <!-- Bento Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-4 h-auto md:h-[500px] reveal">
         
-        <!-- KPI Card 1: OTD -->
-        <div class="bg-slate-800/50 p-6 rounded-lg border border-slate-700 backdrop-blur-sm">
-            <div class="font-mono text-sm text-slate-400 mb-2">ON-TIME DELIVERY (OTD)</div>
-            <div class="font-mono text-4xl font-bold text-green-400 mb-2">99.4%</div>
-            <div class="h-1 w-full bg-slate-700 rounded-full overflow-hidden">
-                <div class="h-full bg-green-400 w-[99.4%]"></div>
+        <!-- Large Block: OTD -->
+        <div class="md:col-span-2 md:row-span-2 glass rounded-3xl p-8 flex flex-col justify-between group hover:border-primary/30 transition duration-500">
+            <div class="flex justify-between items-start">
+                <span class="font-mono text-slate-400 text-sm">ON-TIME DELIVERY (YTD)</span>
+                <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
             </div>
-            <p class="text-xs text-slate-500 mt-3">Target: 98.0% | 12-Month Rolling Avg</p>
-        </div>
-
-        <!-- KPI Card 2: PPM -->
-        <div class="bg-slate-800/50 p-6 rounded-lg border border-slate-700 backdrop-blur-sm">
-            <div class="font-mono text-sm text-slate-400 mb-2">DEFECT RATE (PPM)</div>
-            <div class="font-mono text-4xl font-bold text-blue-400 mb-2">&lt; 500</div>
-             <p class="text-xs text-slate-500 mt-3">Industry Avg: 1,200 | ISO 9001 Standard</p>
-        </div>
-
-        <!-- KPI Card 3: Capacity -->
-        <div class="bg-slate-800/50 p-6 rounded-lg border border-slate-700 backdrop-blur-sm">
-            <div class="font-mono text-sm text-slate-400 mb-2">AVAILABLE CAPACITY</div>
-            <div class="flex items-end gap-2">
-                <div class="font-mono text-4xl font-bold text-white mb-2">10kW</div>
-                <span class="text-slate-400 mb-4 text-sm">Fiber Laser</span>
+            
+            <div class="relative">
+                <div class="text-7xl md:text-9xl font-mono font-bold text-white tracking-tighter group-hover:text-primary transition-colors duration-300">
+                    99.4<span class="text-4xl text-slate-500">%</span>
+                </div>
+                <div class="mt-4 h-2 w-full bg-slate-800 rounded-full overflow-hidden">
+                    <div class="h-full bg-gradient-to-r from-primary to-green-400 w-[99.4%] shadow-[0_0_10px_rgba(37,99,235,0.5)]"></div>
+                </div>
             </div>
-            <p class="text-xs text-slate-500 mt-1">24/7 Shifts Operational (GTA Facility)</p>
+            
+            <p class="text-sm text-slate-400 font-mono">
+                Outperforming industry avg (82%) by <span class="text-green-400">+17.4%</span>.
+            </p>
         </div>
 
-        <!-- KPI Card 4: Certs -->
-        <div class="bg-slate-800/50 p-6 rounded-lg border border-slate-700 backdrop-blur-sm flex flex-col justify-between">
-            <div class="font-mono text-sm text-slate-400 mb-2">VALIDATED CERTIFICATIONS</div>
-            <div class="flex flex-col gap-2">
-                <div class="flex items-center gap-2 text-white font-semibold">
-                    <span class="text-green-400">✓</span> ISO 9001:2015
+        <!-- Medium Block: PPM -->
+        <div class="md:col-span-2 glass rounded-3xl p-8 flex items-center justify-between group hover:bg-slate-900 transition">
+            <div>
+                 <div class="font-mono text-slate-400 text-sm mb-1">DEFECT RATE (PPM)</div>
+                 <div class="text-5xl font-mono font-bold text-white group-hover:text-primary transition">&lt; 500</div>
+            </div>
+            <div class="h-16 w-16 rounded-full border-4 border-slate-800 border-t-primary flex items-center justify-center font-bold text-xs text-slate-500">
+                0.05%
+            </div>
+        </div>
+
+        <!-- Small Block: Capacity -->
+        <div class="md:col-span-1 glass rounded-3xl p-8 flex flex-col justify-center group hover:bg-slate-900 transition">
+            <div class="font-mono text-slate-400 text-xs mb-2">LASER POWER</div>
+            <div class="text-4xl font-mono font-bold text-white mb-1">12kW</div>
+            <div class="text-xs text-primary">Fiber Optic Ready</div>
+        </div>
+
+        <!-- Small Block: Certs -->
+        <div class="md:col-span-1 bg-gradient-to-br from-primary to-blue-900 rounded-3xl p-8 flex flex-col justify-center relative overflow-hidden group">
+            <div class="absolute top-0 right-0 w-24 h-24 bg-white/10 rounded-full blur-2xl transform translate-x-10 -translate-y-10 group-hover:translate-x-5 transition duration-700"></div>
+            
+            <div class="font-mono text-blue-200 text-xs mb-4">CERTIFIED</div>
+            <div class="space-y-2">
+                <div class="flex items-center gap-2 font-bold text-white">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    ISO 9001
                 </div>
-                <div class="flex items-center gap-2 text-white font-semibold">
-                    <span class="text-green-400">✓</span> CWB W47.1
-                </div>
-                <div class="flex items-center gap-2 text-white font-semibold">
-                    <span class="text-green-400">✓</span> CGP Registered
+                <div class="flex items-center gap-2 font-bold text-white">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    CWB W47.1
                 </div>
             </div>
         </div>
 
     </div>
-
   </div>
 </section>

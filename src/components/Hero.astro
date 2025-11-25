@@ -1,39 +1,55 @@
 ---
 import Button from './ui/Button.astro';
-import heroBg from '../assets/hero-service-bg.png';
-
 ---
 
-<section class="relative w-full h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
-  <!-- Background Image -->
+<section class="relative w-full min-h-[90vh] flex items-center overflow-hidden">
+  <!-- Dynamic Background -->
   <div class="absolute inset-0 z-0">
     <img 
-      src={heroBg.src} 
-      alt="Metal Fabrication Shop Floor" 
-      class="w-full h-full object-cover"
+      src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&q=80" 
+      alt="High Precision Laser Cutting Sparks" 
+      class="w-full h-full object-cover opacity-60"
     />
-    <!-- Overlay -->
-    <div class="absolute inset-0 bg-black/40"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/90 to-transparent"></div>
   </div>
 
   <!-- Content -->
-  <div class="relative z-10 container mx-auto px-6 md:px-20 text-white">
-    <div class="max-w-4xl space-y-8">
-      <h1 class="font-montserrat font-bold text-5xl md:text-7xl leading-tight">
-        Global Cost Structure. <br/>Domestic Security.
+  <div class="relative z-10 container mx-auto px-6 md:px-12 pt-20 reveal">
+    <div class="max-w-4xl">
+      <!-- Badge -->
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/30 bg-primary/10 backdrop-blur-sm mb-6">
+        <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+        <span class="text-xs font-mono text-primary-light uppercase tracking-widest">ISO 9001:2015 Certified</span>
+      </div>
+
+      <h1 class="mb-6 drop-shadow-lg">
+        Global Economics. <br/>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-white">Domestic Security.</span>
       </h1>
       
-      <p class="font-poppins text-xl md:text-2xl font-normal opacity-90 max-w-2xl">
-        The risk-insured manufacturing partner for Canadian OEMs. We combine the economics of global sourcing with the reliability of ISO 9001:2015 domestic fabrication.
+      <p class="text-xl md:text-2xl text-slate-300 font-light max-w-2xl mb-10 leading-relaxed border-l-4 border-primary pl-6">
+        The hybrid supply chain partner for Canadian OEMs. We combine the cost advantages of global sourcing with the risk immunity of local manufacturing.
       </p>
 
-      <div class="flex flex-col sm:flex-row gap-4 pt-4">
-        <Button href="#quote" variant="primary">
-          Calculate Your Savings
+      <div class="flex flex-col sm:flex-row gap-4">
+        <Button href="#quote" variant="primary" class="shadow-lg shadow-blue-500/20">
+          Calculate Risk Savings
         </Button>
-        <Button href="#capabilities" variant="outline">
-          Explore Hybrid Model
+        <Button href="#services" variant="outline">
+          View Capabilities
         </Button>
+      </div>
+
+      <!-- Trust Bar -->
+      <div class="mt-20 pt-8 border-t border-white/10 flex flex-col md:flex-row gap-8 md:items-center text-slate-500 text-sm font-mono">
+        <span>TRUSTED BY ENGINEERS AT:</span>
+        <div class="flex gap-8 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+            <!-- Mock Logos (Text for now, can be SVGs) -->
+            <span class="font-bold text-lg tracking-tight hover:text-white">BOMBARDIER</span>
+            <span class="font-bold text-lg tracking-tight hover:text-white">MAGNA</span>
+            <span class="font-bold text-lg tracking-tight hover:text-white">LINAMAR</span>
+            <span class="font-bold text-lg tracking-tight hover:text-white">SIEMENS</span>
+        </div>
       </div>
     </div>
   </div>

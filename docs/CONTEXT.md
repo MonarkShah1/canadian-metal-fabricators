@@ -8,51 +8,41 @@
    - **Guarantee:** If global shipping/supply fails, local capacity takes over.
 **Goal:** 5x impressions, shifting perception from local "job shop" to sophisticated supply chain partner.
 
-## 2. Target Audience
+## 2. Target Audience (ICP Analysis)
 **Primary User:** Senior Procurement Managers & Supply Chain Directors.
-**Region:** Eastern Canada.
-**Pain Points:** 
-- Volatility/Quality risks of overseas sourcing.
-- Unit cost pressure.
-**Needs:** Lower unit costs *without* supply chain risk.
+**Psychology:** "Cost of Resilience." They need cost reduction (inflation pressure) but fear supply chain failure (career risk).
+**Key Pain Points:**
+- **Hidden Costs:** Expedited freight, rework, line-down fees from cheap suppliers.
+- **Black Box:** Lack of visibility into overseas production status.
+- **Agility:** Inability to scale or pivot quickly with pure offshore models.
 
-## 3. Technical Strategy
-**Framework:** Astro (Static Site Generation for speed/SEO).
-**Styling:** Tailwind CSS (Modern, utility-first).
-**Architecture:** "Siloed" Structure using Astro Content Collections.
-**Performance:** Critical for trust (Core Web Vitals).
+## 3. Site Strategy: The "Sales Argument" Flow
+The website structure mirrors a high-stakes B2B sales pitch:
+1.  **The Hook (Hero):** "Global Cost. Domestic Security." (The Promise).
+2.  **The Agitation:** "The Hidden Cost of Fragility." (Exposing the pain of current models).
+3.  **The Solution:** "Hybrid Manufacturing Model." (LCL + Safety Stock).
+4.  **The Proof:** "Digital Control Tower." (Transparency/Metrics).
+5.  **The Capability:** "Capacity from 1 to 100k." (Services).
 
-## 4. SEO & Site Architecture (The Blueprint)
-**Strategy:** Dominate "High-Intent" and "Local" search via semantic silos.
+## 4. Technical Strategy
+**Framework:** Astro (SSG).
+**Styling:** Tailwind CSS + "Technical" Palette (Slate/Zinc/Blue).
+**Architecture:** Siloed Content Collections (`services`, `locations`, `industries`).
+**Performance:** Core Web Vitals (LCP/CLS) optimization for trust.
 
-### A. The "Money" Silos (Commercial Intent)
-- **`/services/`**: Core capability pages (e.g., `laser-cutting`, `cnc-bending`).
-    - *Focus:* Tech specs, machine capacity, ISO standards.
-- **`/industries/`**: Solution-based pages (e.g., `aerospace`, `medical`).
-    - *Focus:* Industry compliance, specific pain points.
-
-### B. The "Local" Weapon (Map Pack Dominance)
-- **`/locations/`**: Programmatic landing pages (e.g., `toronto-sheet-metal`, `mississauga-laser-cutting`).
-    - *Focus:* Hyper-local keywords + Embedded Map + "Near Me" signals.
-    - *Canonical:* Strictly managed to avoid duplicate content issues.
-
-### C. The "Knowledge" Silo (Authority)
-- **`/blog/`**: Engineering-focused guides (e.g., "Fiber vs. CO2 Laser Cost Analysis").
-    - *Goal:* Capture top-of-funnel traffic and build backlinks.
-
-## 5. Capabilities & Services
-**Strategy:** Hybrid Model (Global for volume, Domestic for speed/risk mitigation).
-**Key Processes:** Fiber Laser Cutting, CNC Bending, Fabrication, Assembly.
-**Trust Signals (Crucial):**
-- **ISO 9001:2015:** End-to-end certification.
-- **Stocking Programs:** Domestic warehousing for JIT delivery.
-- **Rapid Prototyping:** Local speed for R&D/Validation.
+## 5. SEO & Site Architecture
+### A. Commercial Silos
+- **`/services/`**: Tech specs, capacity data.
+- **`/industries/`**: Compliance focus (ISO/CWB).
+### B. Local Silos
+- **`/locations/`**: Programmatic pages for Map Pack dominance (e.g., `mississauga-laser-cutting`).
+### C. Knowledge Silo
+- **`/blog/`**: Engineering cost-analysis guides.
 
 ## 6. Design & Vibe
-**Aesthetic:** Modern, Tech-Forward, Transparent, Sophisticated.
-**Anti-Pattern:** Do *not* look like a gritty local workshop.
-**Design Source:** Figma.
+**Aesthetic:** Precision Engineering. Dark Mode accents, Monospace data, Wireframe visuals.
+**Anti-Pattern:** No "Corporate Stock Photos" of handshakes. Use data visualizations and "Digital Twin" aesthetics.
 
 ## 7. Development Workflow
-- **Master Doc:** `@docs/CONTEXT.md` (This file).
-- **Updates:** Continuous updates as features are built.
+- **Master Doc:** `@docs/CONTEXT.md`.
+- **Updates:** Continuous updates.

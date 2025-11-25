@@ -2,24 +2,30 @@
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
 import Hero from '../components/Hero.astro';
-import QualityDashboard from '../components/QualityDashboard.astro';
+import CostOfRiskSection from '../components/CostOfRiskSection.astro';
 import HybridModelSection from '../components/HybridModelSection.astro';
-import ControlTowerSection from '../components/ControlTowerSection.astro';
 import ServicesSection from '../components/ServicesSection.astro';
 import ValuePropSection from '../components/ValuePropSection.astro';
+import QualityDashboard from '../components/QualityDashboard.astro';
+import Testimonials from '../components/Testimonials.astro';
+import ControlTowerSection from '../components/ControlTowerSection.astro';
+import ContactSection from '../components/ContactSection.astro';
 import Footer from '../components/Footer.astro';
 ---
 
-<Layout title="Canadian Metal Fabricators | Hybrid Supply Chain Partner">
+<Layout title="Canadian Metal Fabricators | The Risk-Insured Supply Chain">
 	<Navbar />
 	
 	<main>
 		<Hero />
-		<QualityDashboard /> <!-- Replaced IndustriesSection for Data-Driven Trust -->
-		<HybridModelSection />
+		<CostOfRiskSection />
+        <HybridModelSection />
+        <ServicesSection />
+        <ValuePropSection />
+		<QualityDashboard />
+		<Testimonials />
 		<ControlTowerSection />
-		<ValuePropSection /> 
-		<ServicesSection />
+		<ContactSection />
 	</main>
 
 	<Footer />

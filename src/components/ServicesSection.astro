@@ -1,48 +1,65 @@
----
+--- 
 import ServiceCard from './ui/ServiceCard.astro';
 
-// Placeholder data - In a real app, this might come from a CMS
 const services = [
   {
-    title: "Hybrid Laser Cutting",
-    description: "Rapid local prototyping for NPI, seamless transition to global volume production. 10kW Fiber laser precision for steel and aluminum.",
-    image: "https://placehold.co/600x400/355D9A/white?text=Laser+Cutting",
+    title: "Design Engineering",
+    description: "DFM analysis, CAD modeling, and rapid prototyping to optimize your parts for mass production.",
+    image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&q=80", // Engineer with CAD
+    href: "/services/design"
+  },
+  {
+    title: "Material Sourcing",
+    description: "Direct mill purchasing of Steel, Aluminum, and Stainless. Global purchasing power.",
+    image: "https://images.unsplash.com/photo-1567789884554-0b844b5986c1?auto=format&fit=crop&q=80", // Steel Coils
+    href: "/services/sourcing"
+  },
+  {
+    title: "Laser Cutting",
+    description: "High-speed fiber lasers for precision profiling of sheet and plate up to 1\" thick.",
+    image: "https://images.unsplash.com/photo-1625842268584-8f3296236761?auto=format&fit=crop&q=80", // Laser sparks
     href: "/services/laser-cutting"
   },
   {
-    title: "Scalable CNC Bending",
-    description: "Complex forming with guaranteed repeatability. We handle everything from single custom brackets to 50,000-unit production runs.",
-    image: "https://placehold.co/600x400/355D9A/white?text=CNC+Bending",
-    href: "/services/bending"
+    title: "CNC Bending",
+    description: "Complex forming with 7-axis press brakes. Zero-springback technology for tight tolerances.",
+    image: "https://images.unsplash.com/photo-1565439396603-c24724933a30?auto=format&fit=crop&q=80", // Press brake
+    href: "/services/cnc-bending"
   },
   {
-    title: "Turnkey Assembly",
-    description: "End-to-end mechanical assembly. We manage the BOM, sourcing, and logistics so you receive finished goods ready for your line.",
-    image: "https://placehold.co/600x400/355D9A/white?text=Welding",
+    title: "Welding & Fabrication",
+    description: "CWB W47.1 certified MIG/TIG welders and robotic cells for consistent structural integrity.",
+    image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&q=80", // Welding
     href: "/services/welding"
+  },
+  {
+    title: "Surface Finishing",
+    description: "Powder coating, zinc plating, anodizing, and passivation managed to your ASTM specs.",
+    image: "https://images.unsplash.com/photo-1621252179027-94459d27d3ee?auto=format&fit=crop&q=80", // Spray painting/Finishing
+    href: "/services/finishing"
+  },
+  {
+    title: "Assembly & Integration",
+    description: "Full electro-mechanical assembly, kitting, and custom packaging. Ready for the end-user.",
+    image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80", // Assembly line
+    href: "/services/assembly"
   }
 ];
 ---
 
-<section id="services" class="py-24 bg-gray-50">
-  <div class="container mx-auto px-6 md:px-20">
-    <!-- Header -->
-    <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
-      <div class="max-w-2xl">
-        <h2 class="font-montserrat font-bold text-4xl md:text-5xl mb-6">From Prototype to Global Scale</h2>
-        <p class="font-poppins text-gray-600 text-lg">
-          We don't just cut parts; we build supply chains. Access unlimited capacity without compromising on quality or lead time.
-        </p>
-      </div>
-      
-      <!-- View All Button (Hidden on mobile to save space, or kept if essential) -->
-      <a href="/services" class="hidden md:inline-block font-poppins font-semibold text-primary border-b-2 border-primary pb-1 hover:text-opacity-80">
-        View All Capabilities
-      </a>
+<section id="services" class="py-24 bg-slate-950 border-t border-slate-900">
+  <div class="container mx-auto px-6 md:px-12">
+    
+    <div class="text-center max-w-3xl mx-auto mb-20 reveal">
+      <span class="font-mono text-primary text-sm tracking-widest uppercase mb-4 block">End-to-End Capabilities</span>
+      <h2 class="font-montserrat font-bold text-4xl mb-6 text-white">Integrated Manufacturing Ecosystem.</h2>
+      <p class="text-slate-400 text-lg">
+        Consolidate your supply base. We integrate engineering, fabrication, and logistics into a single, predictable workflow.
+      </p>
     </div>
 
     <!-- Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 reveal">
       {services.map(service => (
         <ServiceCard 
           title={service.title}
@@ -51,12 +68,19 @@ const services = [
           href={service.href}
         />
       ))}
+      
+      <!-- Call to Action Card (Fills the 8th slot if needed, or sits at end) -->
+      <div class="bg-slate-900 rounded-2xl p-8 border border-slate-800 flex flex-col justify-center items-center text-center group hover:border-primary transition duration-300">
+        <h3 class="text-xl font-bold text-white mb-4">Need Something Custom?</h3>
+        <p class="text-slate-400 text-sm mb-6">
+            Our engineering team loves a challenge. Let's review your prints.
+        </p>
+        <a href="#contact" class="text-primary font-bold hover:text-white transition flex items-center gap-2">
+            Get a Quote <span>&rarr;</span>
+        </a>
+      </div>
+
     </div>
     
-    <div class="mt-12 text-center md:hidden">
-         <a href="/services" class="font-poppins font-semibold text-primary border-b-2 border-primary pb-1">
-            View All Capabilities
-          </a>
-    </div>
   </div>
 </section>
