@@ -20,6 +20,9 @@
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     @apply bg-background text-slate-300 font-poppins selection:bg-primary selection:text-white;
   }
