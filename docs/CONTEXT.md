@@ -4,7 +4,8 @@
 **Name:** Canadian Metal Fabricators (CMF)
 **Positioning:** "Construction Supply Chain Partner" for General Contractors & Developers.
 **Core Value Prop:** "Construction Risk Assurance."
-   - **Mechanism:** Hybrid Model. High-volume Division 5/10 metals (Railings, Embeds) produced offshore (Cost), backed by a domestic GTA factory (Speed/Rescue).
+   - **Mechanism:** Source Inspection Model. CWB-Certified Inspectors deployed to overseas factories (India) for "Boots on the Ground" QC.
+   - **Logistics:** Hybrid Logistics. Overflow storage at trusted 3PL partners in GTA, with "Rescue Capacity" at our own domestic factory.
    - **Guarantee:** "Domestic Backstop." If global supply fails, local capacity guarantees the critical path.
 **Goal:** Dominate the "Construction Metal Management" niche. 5x impressions from Tier 1/2 GCs.
 
@@ -23,10 +24,10 @@ The website structure is based on a **"Risk-Reversal" Framework** (PAS: Problem-
 *See detailed breakdown in:* `@docs/HOMEPAGE_STRUCTURE.md`
 
 1.  **The Hook (Hero):** "Offshore Economics. Domestic Guarantee."
-2.  **The Agitation:** "Saving 20% isn't worth explaining a 3-week delay." (Reputation/Status risk).
-3.  **The Solution:** "The Hybrid Shield." (Global Scale + Domestic Rescue).
+2.  **The Agitation:** "The Price of Uncertainty." (Timeline/Delay Risk).
+3.  **The Solution:** "The Hybrid Shield." (Source QC + 3PL Buffer + Domestic Rescue).
 4.  **The Capability:** Division 5 & 10 Focus (Volume vs. Custom).
-5.  **The Process:** "3PL + QC Logistics." (Your laydown area is our yard).
+5.  **The Process:** "Construction Logistics." (Your laydown area is our 3PL Yard).
 6.  **The Proof:** CWB Certified & On-Time Guarantee.
 7.  **CTA:** "Start Your Quote."
 

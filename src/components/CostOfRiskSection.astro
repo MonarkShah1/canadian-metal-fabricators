@@ -66,14 +66,23 @@ import Button from './ui/Button.astro';
     </div>
 
     <!-- The Problem Statement -->
-    <div class="max-w-3xl mx-auto text-center reveal border-t border-slate-900 pt-16">
+    <div class="max-w-3xl mx-auto text-center reveal border-t border-slate-900 pt-16 relative">
         <h3 class="text-2xl font-bold text-white mb-6">
             Stop buying "Hope."
         </h3>
-        <p class="text-slate-400 text-lg leading-relaxed">
+        <p class="text-slate-400 text-lg leading-relaxed mb-12">
             Standard brokers have no control. They are just mailboxes forwarding your drawings to a factory they've never visited. You aren't just losing money—you're risking the Critical Path.
         </p>
+
+        <!-- The Transition Connector -->
+        <div class="absolute -bottom-32 left-1/2 -translate-x-1/2 flex flex-col items-center z-30">
+            <!-- Vertical Line (Continuous) -->
+            <div class="w-px h-32 bg-slate-700"></div>
+        </div>
     </div>
+    
+  </div>
+</section>
     
   </div>
 </section>
