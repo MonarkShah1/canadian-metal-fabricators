@@ -1,8 +1,12 @@
 ---
 city: "Toronto (GTA)"
+title: "Sheet Metal Fabrication Services in Toronto | CMF"
 address: "123 Manufacturing Blvd, Toronto, ON"
 description: "Our Headquarters and Rapid Response Facility. 40,000 sq ft of ISO 9001 certified manufacturing capacity."
 mapUrl: "https://www.google.com/maps/embed?pb=..."
+coordinates:
+  lat: 43.6532
+  lng: -79.3832
 ---
 
 ## The Heart of the Hybrid Model

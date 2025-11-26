@@ -1,6 +1,23 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --color-primary: #2563EB;
+  --color-primary-dark: #1e40af;
+  --color-primary-light: #60a5fa;
+  
+  --color-secondary: #000000;
+  --color-background: #020617;
+  --color-accent: #F59E0B;
+
+  --color-slate-850: #151F32;
+  --color-slate-900: #0F172A;
+  --color-slate-950: #020617;
+
+  --font-montserrat: Montserrat, sans-serif;
+  --font-poppins: Poppins, sans-serif;
+  --font-mono: Roboto Mono, monospace;
+}
 
 @layer base {
   body {
