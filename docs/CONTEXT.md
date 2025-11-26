@@ -53,3 +53,10 @@ The website structure is based on a **"Risk-Reversal" Framework** (PAS: Problem-
 ## 7. Development Workflow
 - **Master Strategy:** `@docs/CONTEXT.md` & `@docs/ICP_CONTEXT.md`.
 - **Updates:** Continuous iteration based on user feedback.
+
+### Current Progress (Homepage Build)
+- **Hero Section:** [LOCKED] "The Digital Twin" - High-impact 3D Wireframe Globe.
+- **Agitation Section:** [LOCKED] "The Slim Timeline" - Visualizing the cost of delay.
+- **Solution Section:** [LOCKED] "The Hybrid Stack" - Vertical architectural layers.
+- **Capabilities Section:** [LOCKED] "The Blueprint Menu" - Technical SVG grid.
+- **Logistics & Social Proof:** [IN PROGRESS] Aligning with "Source Inspection" model.

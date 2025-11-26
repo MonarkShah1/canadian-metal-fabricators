@@ -4,57 +4,46 @@ This document outlines the strategic flow for the Canadian Metal Fabricators (CM
 
 ---
 
-## 1. Hero Section: The Big Promise (Instant Clarity)
-*   **Purpose:** Combine the *Benefit* (Cost) with the *Assurance* (Security) immediately.
+## 1. Hero Section: The Big Promise (Instant Clarity) [LOCKED]
+*   **Design:** "The Digital Twin" - Wireframe Globe Visual.
 *   **Headline:** **Offshore Economics. Domestic Guarantee.**
 *   **Subhead:** The only metal fabricator that backs low-cost global production with a local GTA factory. We manufacture for budget, but guarantee the schedule from Toronto.
-*   **CTA Primary:** "Get a Risk-Free Estimate"
-*   **CTA Secondary:** "See Our Capacity"
-*   **Visual:** Split screen or composite image. Left side: A shipping container/port (Global scale). Right side: Sparks flying from a welder's torch in a Toronto shop (Local speed).
+*   **Visual:** Split/Integrated 3D Wireframe Globe + "Reality Check" Marquee.
 
-## 2. Agitation Section: The Villain (Status & Reputation)
-*   **Purpose:** Validate their fear and position the "Cheap Supplier" as the enemy of their reputation.
-*   **Headline:** **"Saving 20% isn't worth explaining a 3-week delay to the Developer."**
-*   **Copy:** You’ve been there: The container is stuck at the port, the crane is idle, and the owner is screaming about Liquidated Damages. When you buy pure offshore, you aren't buying metal—you're buying risk.
-*   **The 3 Enemies:**
-    1.  **The Invisible Status:** "Your material is 'on the water'... somewhere." (Zero visibility).
-    2.  **The Quality Trap:** "It arrived wrong, and the factory is 8,000 miles away." (No recourse).
-    3.  **The Reputation Hit:** "The project is late, and it's your trade that caused it." (Career risk).
+## 2. Agitation Section: The Villain (Status & Reputation) [LOCKED]
+*   **Design:** "The Slim Timeline" - A timeline bar showing a "Gap" break.
+*   **Headline:** **The Price of Uncertainty.**
+*   **Copy:** Saving 20% isn't worth explaining a 3-week delay.
+*   **Visual:** A progress bar interrupted by a red "Delay" segment, with a floating cost card ("-$15,000/Day").
 
-## 3. The Solution: The "Hybrid Shield"
-*   **Purpose:** Introduce the unique mechanism that solves the pain.
-*   **Headline:** **The Hybrid Supply Chain.**
-*   **Visual Diagram:** A 3-Step Process Graphic.
-    1.  **Global Volumetrics:** Heavy fabrication (Division 5/10) done in ISO-certified LCL partners for 30-40% savings.
-    2.  **The Domestic Firewall:** All goods arrive at our GTA logistics hub for QC and Buffer Storage. *Nothing hits your site unchecked.*
-    3.  **The Rescue Guarantee:** If the supply chain breaks, our local welders take over immediately. We print the missing part in Toronto.
+## 3. The Solution: The "Hybrid Shield" [LOCKED]
+*   **Design:** "The Architectural Stack" - Vertical layered cards connected by a central line.
+*   **Headline:** **The Hybrid Shield.**
+*   **Visual Diagram:**
+    1.  **Global Volumetrics:** Cost Scale (Bottom).
+    2.  **Logistics & Verification:** 3PL Buffer + QC (Middle).
+    3.  **Rescue Fabrication:** Domestic Shop Capacity (Top).
+*   **Transition:** "The Fix" Connector Pill leading into the stack.
 
-## 4. Capabilities: The Menu (Division 5 & 10 Focus)
-*   **Purpose:** Confirm we handle their specific trade scope.
-*   **Format:** Bento-Grid of Metal Categories.
-    *   **High Volume (Offshore Core):** Standard Guardrails, Fencing, Bollards, Embeds.
-    *   **Structural (Offshore Core):** Lintels, Ledger Angles, Beam support.
-    *   **Architectural (Local/Hybrid):** Feature Stairs, Canopies, Custom Entrance Gates.
-    *   **The Network (Local):** "One PO" access to Laser Tube Cutting, Galvanizing, Powder Coating.
+## 4. Capabilities: The Menu (Division 5 & 10 Focus) [LOCKED]
+*   **Design:** "The Blueprint Menu" - Technical Grid with SVG Icons.
+*   **Headline:** **Technical Capabilities.**
+*   **Format:** 7-Item Grid (Design, Sourcing, Laser, Bending, Welding, Finishing, Assembly) + CTA Card.
+*   **Style:** Dark, thin-line technical aesthetic.
 
-## 5. Logistics: The Process (3PL + QC)
-*   **Purpose:** Address the "Laydown Space" objection.
-*   **Headline:** **Your Laydown Area is Our Yard.**
-*   **Copy:** "Downtown sites don't have room for 40-foot containers. We act as your buffer."
-    *   **Step 1:** We import and clear customs.
-    *   **Step 2:** We store at our secure 3PL Logistics Hub in the GTA.
-    *   **Step 3:** We truck to your site Just-In-Time (JIT) — piece by piece, floor by floor.
+## 5. Logistics: Construction Control Tower [NEXT]
+*   **Purpose:** Address the "Laydown Space" objection & Show "Source Inspection".
+*   **Headline:** **Your Laydown Area is Our Network.**
+*   **Key Features:** Source Inspection (India), 3PL Buffer (GTA), JIT Delivery (Site).
+*   **Visual:** A "Live Dashboard" mock showing Inspector Reports & Inventory Levels.
 
-## 6. Social Proof: The Authority
-*   **Purpose:** Build trust without a 50-year history of this specific model.
+## 6. Social Proof: Certified Trust [NEXT]
+*   **Purpose:** Build trust with Hard Certifications.
 *   **Headline:** **Built on Certified Capacity.**
-*   **Trust Signals (Badges):**
-    *   **CWB Certified:** (The non-negotiable standard for Canadian construction).
-    *   **ISO 9001:** (Process quality).
-    *   **COR Safety:** (Site safety compliance).
-*   **The "Metric":** "100% On-Time Delivery Guarantee" (Backed by the Domestic Shop).
+*   **Trust Signals (Badges):** CWB W47.1, ISO 9001.
+*   **Stats:** 0 Liquidated Damages, 100% Source Inspection.
 
-## 7. Final CTA: The Challenge
+## 7. Final CTA: The Challenge [NEXT]
 *   **Headline:** **Stop Gambling Your Schedule.**
-*   **Subhead:** Get the price of India with the safety of Canada.
 *   **Button:** "Start Your Quote"
+
