@@ -1,48 +1,54 @@
 --- 
 import ServiceCard from './ui/ServiceCard.astro';
 
-const services = [
+const volumeServices = [
   {
-    title: "Design Engineering",
-    description: "DFM analysis, CAD modeling, and rapid prototyping to optimize your parts for mass production.",
-    image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&q=80", // Engineer with CAD
-    href: "/services/design"
+    title: "Standard Guardrails",
+    description: "High-volume parking garage and stairwell railings. Pre-fabricated offshore for 30% savings.",
+    image: "https://images.unsplash.com/photo-1590240974866-932d6657876a?auto=format&fit=crop&q=80", // Guardrails
+    href: "/services/guardrails"
   },
   {
-    title: "Material Sourcing",
-    description: "Direct mill purchasing of Steel, Aluminum, and Stainless. Global purchasing power.",
-    image: "https://images.unsplash.com/photo-1567789884554-0b844b5986c1?auto=format&fit=crop&q=80", // Steel Coils
-    href: "/services/sourcing"
+    title: "Embeds & Lintels",
+    description: "Structural embeds, ledger angles, and beam supports. Mass produced to your schedule.",
+    image: "https://images.unsplash.com/photo-1535732759880-9470d2b4f67e?auto=format&fit=crop&q=80", // Steel construction
+    href: "/services/structural-embeds"
   },
   {
-    title: "Laser Cutting",
-    description: "High-speed fiber lasers for precision profiling of sheet and plate up to 1\" thick.",
-    image: "https://images.unsplash.com/photo-1625842268584-8f3296236761?auto=format&fit=crop&q=80", // Laser sparks
-    href: "/services/laser-cutting"
+    title: "Bollards & Fencing",
+    description: "Site perimeter security, decorative bollards, and chain link systems.",
+    image: "https://images.unsplash.com/photo-1621183311985-787e35f8d977?auto=format&fit=crop&q=80", // Fencing/Metal
+    href: "/services/site-security"
+  }
+];
+
+const localServices = [
+  {
+    title: "Custom Stairs & Landings",
+    description: "Complex architectural features, spiral stairs, and tight-tolerance landings fabricated in GTA.",
+    image: "https://images.unsplash.com/photo-1565439396603-c24724933a30?auto=format&fit=crop&q=80", // Metal Stairs context
+    href: "/services/stairs"
   },
   {
-    title: "CNC Bending",
-    description: "Complex forming with 7-axis press brakes. Zero-springback technology for tight tolerances.",
-    image: "https://images.unsplash.com/photo-1565439396603-c24724933a30?auto=format&fit=crop&q=80", // Press brake
-    href: "/services/cnc-bending"
+    title: "\"Rescue\" Fabrication",
+    description: "Site measurements wrong? Missing parts? We fabricate replacements in 24-48 hours.",
+    image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&q=80", // Welding sparks
+    href: "/services/emergency-fab"
+  }
+];
+
+const networkServices = [
+  {
+    title: "Specialized Processing",
+    description: "Laser Tube Cutting, Heavy Rolling, and 5-Axis Machining. Accessed via our local partner network.",
+    image: "https://images.unsplash.com/photo-1625842268584-8f3296236761?auto=format&fit=crop&q=80", // Laser
+    href: "/services/processing"
   },
   {
-    title: "Welding & Fabrication",
-    description: "CWB W47.1 certified MIG/TIG welders and robotic cells for consistent structural integrity.",
-    image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&q=80", // Welding
-    href: "/services/welding"
-  },
-  {
-    title: "Surface Finishing",
-    description: "Powder coating, zinc plating, anodizing, and passivation managed to your ASTM specs.",
-    image: "https://images.unsplash.com/photo-1621252179027-94459d27d3ee?auto=format&fit=crop&q=80", // Spray painting/Finishing
+    title: "Finishing & Galvanizing",
+    description: "Hot-dip galvanizing (ASTM A123) and architectural powder coating managed under one PO.",
+    image: "https://images.unsplash.com/photo-1621252179027-94459d27d3ee?auto=format&fit=crop&q=80", // Finishing
     href: "/services/finishing"
-  },
-  {
-    title: "Assembly & Integration",
-    description: "Full electro-mechanical assembly, kitting, and custom packaging. Ready for the end-user.",
-    image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80", // Assembly line
-    href: "/services/assembly"
   }
 ];
 ---
@@ -50,35 +56,91 @@ const services = [
 <section id="services" class="py-24 bg-slate-950 border-t border-slate-900">
   <div class="container mx-auto px-6 md:px-12">
     
-    <div class="text-center max-w-3xl mx-auto mb-20 reveal">
-      <span class="font-mono text-primary text-sm tracking-widest uppercase mb-4 block">End-to-End Capabilities</span>
-      <h2 class="font-montserrat font-bold text-4xl mb-6 text-white">Integrated Manufacturing Ecosystem.</h2>
+    <div class="text-center max-w-4xl mx-auto mb-20 reveal">
+      <span class="font-mono text-primary text-sm tracking-widest uppercase mb-4 block">Division 5 & 10 Scope</span>
+      <h2 class="font-montserrat font-bold text-4xl mb-6 text-white">The Right Tool for the Job.</h2>
       <p class="text-slate-400 text-lg">
-        Consolidate your supply base. We integrate engineering, fabrication, and logistics into a single, predictable workflow.
+        We split your package. High-volume goes Global for cost. Complex & Urgent stays Local for speed.
       </p>
     </div>
 
-    <!-- Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 reveal">
-      {services.map(service => (
-        <ServiceCard 
-          title={service.title}
-          description={service.description}
-          imageSrc={service.image}
-          href={service.href}
-        />
-      ))}
-      
-      <!-- Call to Action Card (Fills the 8th slot if needed, or sits at end) -->
-      <div class="bg-slate-900 rounded-2xl p-8 border border-slate-800 flex flex-col justify-center items-center text-center group hover:border-primary transition duration-300">
-        <h3 class="text-xl font-bold text-white mb-4">Need Something Custom?</h3>
-        <p class="text-slate-400 text-sm mb-6">
-            Our engineering team loves a challenge. Let's review your prints.
-        </p>
-        <a href="#contact" class="text-primary font-bold hover:text-white transition flex items-center gap-2">
-            Get a Quote <span>&rarr;</span>
-        </a>
-      </div>
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        
+        <!-- Column 1: Global Volume -->
+        <div class="space-y-8 reveal">
+            <div class="flex items-center gap-3 mb-4 border-b border-slate-800 pb-4">
+                <div class="w-3 h-3 bg-blue-500 rounded-full"></div>
+                <h3 class="text-xl font-bold text-white">Global Volume</h3>
+                <span class="ml-auto text-xs font-mono text-slate-500 border border-slate-800 px-2 py-1 rounded bg-slate-900">COST SAVINGS</span>
+            </div>
+            {volumeServices.map(service => (
+                <ServiceCard 
+                  title={service.title}
+                  description={service.description}
+                  imageSrc={service.image}
+                  href={service.href}
+                />
+            ))}
+        </div>
+
+        <!-- Column 2: Local Agility -->
+        <div class="space-y-8 reveal delay-100">
+             <div class="flex items-center gap-3 mb-4 border-b border-slate-800 pb-4">
+                <div class="w-3 h-3 bg-primary rounded-full animate-pulse"></div>
+                <h3 class="text-xl font-bold text-white">Local Agility</h3>
+                <span class="ml-auto text-xs font-mono text-slate-500 border border-slate-800 px-2 py-1 rounded bg-slate-900">SPEED / RESCUE</span>
+            </div>
+            {localServices.map(service => (
+                <ServiceCard 
+                  title={service.title}
+                  description={service.description}
+                  imageSrc={service.image}
+                  href={service.href}
+                />
+            ))}
+            
+            <!-- CTA Card embedded in Local Column -->
+            <div class="bg-primary/10 rounded-2xl p-8 border border-primary/30 flex flex-col justify-center items-center text-center group hover:bg-primary/20 transition duration-300 h-[340px]">
+                <div class="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mb-6 text-primary">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2">Have a Drawing?</h3>
+                <p class="text-slate-300 text-sm mb-6">
+                    Upload your Division 5 package. We'll identify what should go Offshore vs. Local.
+                </p>
+                <a href="#contact" class="bg-primary text-white px-6 py-2 rounded-lg font-bold hover:bg-primary-dark transition shadow-lg shadow-blue-500/20">
+                    Get a Quote
+                </a>
+            </div>
+        </div>
+
+        <!-- Column 3: The Network -->
+        <div class="space-y-8 reveal delay-200">
+             <div class="flex items-center gap-3 mb-4 border-b border-slate-800 pb-4">
+                <div class="w-3 h-3 bg-slate-500 rounded-full"></div>
+                <h3 class="text-xl font-bold text-white">The Network</h3>
+                <span class="ml-auto text-xs font-mono text-slate-500 border border-slate-800 px-2 py-1 rounded bg-slate-900">SPECIALIZED</span>
+            </div>
+            {networkServices.map(service => (
+                <ServiceCard 
+                  title={service.title}
+                  description={service.description}
+                  imageSrc={service.image}
+                  href={service.href}
+                />
+            ))}
+            
+            <!-- Info Card -->
+            <div class="bg-slate-900 rounded-2xl p-8 border border-slate-800 flex flex-col justify-center h-[340px]">
+                <h3 class="text-lg font-bold text-white mb-4">Why Split the Scope?</h3>
+                <p class="text-slate-400 text-sm mb-4">
+                    Most shops force you to choose: <strong>Cheap & Late</strong> (Offshore) or <strong>Expensive & Fast</strong> (Local).
+                </p>
+                <p class="text-slate-300 text-sm font-bold border-l-2 border-primary pl-4">
+                    We give you both in one contract.
+                </p>
+            </div>
+        </div>
 
     </div>
     
