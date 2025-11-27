@@ -25,7 +25,7 @@ const { Content } = await entry.render();
     <!-- Service Header -->
     <section class="bg-gray-900 text-white py-20 px-6 md:px-20 relative overflow-hidden">
         <div class="absolute inset-0 z-0 opacity-40">
-            {entry.data.heroImage && <img src={entry.data.heroImage} class="w-full h-full object-cover" />}
+            {entry.data.heroImage && <img src={entry.data.heroImage} alt={`${entry.data.title} - CMF Service`} class="w-full h-full object-cover" />}
         </div>
         <div class="relative z-10 max-w-4xl">
             <h1 class="font-montserrat font-bold text-4xl md:text-6xl mb-6">{entry.data.title}</h1>

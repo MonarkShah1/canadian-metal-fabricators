@@ -4,95 +4,119 @@ import Button from './ui/Button.astro';
 
 <section id="cost-of-risk" class="py-24 bg-slate-950 text-white relative overflow-hidden border-t border-slate-900">
   
+  <!-- Input Connector from Previous Section -->
+  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-px h-16 bg-gradient-to-b from-slate-700 to-transparent opacity-50"></div>
+
   <div class="container mx-auto px-6 md:px-12 relative z-10">
     
     <!-- Editorial Header -->
     <div class="text-center max-w-4xl mx-auto mb-16 reveal">
       <h2 class="font-montserrat font-bold text-4xl md:text-5xl mb-6 leading-tight">
-        The Price of <span class="text-red-500">Uncertainty.</span>
+        Certainty in <span class="text-green-500">Every Link.</span>
       </h2>
       <p class="font-poppins text-slate-400 text-lg max-w-2xl mx-auto">
-        When your offshore broker goes dark, your schedule takes the hit. A 20% saving on the PO vanishes the moment your site falls behind.
+        Global scale meets local accountability. We bridge the gap between international economics and domestic precision, ensuring your supply chain never misses a beat.
       </p>
     </div>
 
-    <!-- The "Slim Timeline" Visualization -->
+    <!-- The "Seamless Continuity" Visualization -->
     <div class="max-w-5xl mx-auto mb-20 relative reveal">
             
         <!-- Context Labels -->
         <div class="flex justify-between text-xs font-mono text-slate-500 mb-4 uppercase tracking-widest px-1">
-            <span>Production Start</span>
-            <span class="text-red-400">Delay Impact</span>
+            <span>Global Production</span>
+            <span class="text-green-400">Seamless Continuity</span>
         </div>
 
-        <!-- The Slim Timeline Bar -->
+        <!-- The Timeline Bar -->
         <div class="relative w-full flex items-center mb-8">
             
-            <!-- 1. The "Good" Part (Standard Lead Time) -->
+            <!-- 1. The Global Part (Standard Lead Time) -->
             <div class="h-1 bg-slate-700 w-2/3 rounded-l-full relative group">
-                <div class="absolute -top-6 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition text-[10px] text-slate-400 uppercase tracking-wider">Standard Lead Time</div>
+                <div class="absolute -top-6 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition text-[10px] text-slate-400 uppercase tracking-wider">Global Efficiency</div>
                 <div class="absolute right-0 top-1/2 -translate-y-1/2 w-2 h-2 bg-slate-500 rounded-full"></div>
             </div>
 
-            <!-- 2. The "Gap" (Jagged/Red) -->
-            <div class="h-1 w-1/3 bg-red-500/30 relative flex items-center">
-                 <div class="absolute inset-0 bg-red-500 animate-pulse-slow"></div>
-                 <!-- Jagged Break Icon in Center -->
-                 <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-slate-950 px-2 text-red-500">
-                    <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            <!-- 2. The "Bridge" (Solid/Green) -->
+            <div class="h-1 w-1/3 bg-green-500/30 relative flex items-center rounded-r-full">
+                 <div class="absolute inset-0 bg-green-500 rounded-r-full"></div>
+                 <!-- Link/Check Icon in Center -->
+                 <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-slate-950 px-2 text-green-500">
+                    <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
                  </div>
             </div>
             
-            <!-- End Cap -->
-             <div class="w-1 h-3 bg-red-600 rounded-full absolute right-0"></div>
         </div>
 
-        <!-- The Cost Connection -->
+        <!-- The Value Connection -->
         <div class="flex justify-end pr-[5%] relative">
                 
                 <!-- Dotted Connecting Line -->
-                <div class="absolute -top-8 right-[15%] w-px h-12 border-l border-dashed border-red-500/50"></div>
+                <div class="absolute -top-8 right-[15%] w-px h-12 border-l border-dashed border-green-500/50"></div>
 
-                <!-- Sleek Cost Card -->
+                <!-- Sleek Benefit Card -->
                 <div class="flex flex-col items-end text-right">
-                    <div class="text-[10px] uppercase tracking-widest text-red-400 font-bold mb-1">Projected Cost Impact</div>
-                    <div class="text-4xl md:text-5xl font-mono font-black text-white tracking-tighter mb-2">-$15,000<span class="text-lg text-slate-500 font-normal">/day</span></div>
+                    <div class="text-[10px] uppercase tracking-widest text-green-400 font-bold mb-1">Reliability Standard</div>
+                    <div class="text-4xl md:text-5xl font-mono font-black text-white tracking-tighter mb-2">100%<span class="text-lg text-slate-500 font-normal"> Uptime</span></div>
                     <div class="text-xs text-slate-500 flex items-center gap-2">
-                        <span class="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse"></span> Site Overhead + Penalties
+                        <span class="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span> Verified Schedule Assurance
                     </div>
                 </div>
         </div>
 
     </div>
 
-    <!-- The Problem Statement -->
-    <div class="max-w-3xl mx-auto text-center reveal border-t border-slate-900 pt-16 relative">
+    <!-- The Solution Statement -->
+    <div class="max-w-3xl mx-auto text-center reveal border-t border-slate-900 pt-16 relative mb-20">
         <h3 class="text-2xl font-bold text-white mb-6">
-            Stop buying "Hope."
+            Invest in Reliability.
         </h3>
         <p class="text-slate-400 text-lg leading-relaxed mb-12">
-            Standard brokers have no control. They are just mailboxes forwarding your drawings to a factory they've never visited. You aren't just losing money—you're risking the Critical Path.
+            We view supply chain not as a gamble, but as a discipline. By pairing offshore volume with onshore 'rescue capacity,' we provide Purchasing Managers and OEMs with a redundant, fail-safe delivery model that respects your timeline.
         </p>
 
-        <!-- The Transition Connector -->
-        <div class="absolute -bottom-32 left-1/2 -translate-x-1/2 flex flex-col items-center z-30">
-            <!-- Vertical Line (Continuous) -->
-            <div class="w-px h-32 bg-slate-700"></div>
+        <!-- Connector to Guarantee -->
+        <div class="absolute -bottom-20 left-1/2 -translate-x-1/2 flex flex-col items-center z-0">
+            <div class="w-px h-20 bg-slate-800"></div>
         </div>
+    </div>
+
+    <!-- The Continuity Guarantee Card (Moved & Themed Green) -->
+    <div class="max-w-4xl mx-auto relative z-10 reveal">
+        <div class="relative bg-slate-900/50 backdrop-blur-md border border-green-500/20 rounded-3xl p-8 md:p-12 overflow-hidden shadow-[0_0_50px_rgba(34,197,94,0.05)] group hover:border-green-500/40 transition duration-500">
+            
+            <!-- Green Glow -->
+            <div class="absolute top-0 right-0 w-64 h-64 bg-green-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="flex flex-col md:flex-row items-center gap-8 relative z-10">
+                
+                <!-- Icon -->
+                <div class="shrink-0 relative">
+                    <div class="w-20 h-20 bg-green-500/10 rounded-full border border-green-500/30 flex items-center justify-center shadow-[0_0_20px_rgba(34,197,94,0.2)]">
+                        <svg class="w-10 h-10 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                </div>
+                
+                <!-- Content -->
+                <div class="flex-grow text-center md:text-left">
+                    <h3 class="text-2xl font-bold text-white mb-3 tracking-tight">The Continuity Guarantee</h3>
+                    <p class="text-slate-400 text-base leading-relaxed">
+                        We ensure your critical path remains unbroken. <strong class="text-green-400">Our hybrid model offers built-in redundancy</strong>, utilizing our domestic facility to bridge any gap and keep your machines running.
+                    </p>
+                </div>
+
+                <!-- Action -->
+                <div class="shrink-0">
+                    <Button href="#contact" variant="primary" class="bg-green-600 hover:bg-green-500 text-white font-bold border-none shadow-[0_0_20px_rgba(34,197,94,0.3)]">Get Guaranteed</Button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Final Output Connector (Relative, below card) -->
+    <div class="flex justify-center mt-12 mb-[-6rem] relative z-0">
+        <div class="w-px h-32 bg-gradient-to-b from-slate-800 to-slate-900"></div>
     </div>
     
   </div>
 </section>
-    
-  </div>
-</section>
-
-<style>
-    @keyframes pulse-slow {
-        0%, 100% { opacity: 0.5; }
-        50% { opacity: 1; }
-    }
-    .animate-pulse-slow {
-        animation: pulse-slow 2s infinite ease-in-out;
-    }
-</style>

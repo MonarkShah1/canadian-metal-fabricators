@@ -2,18 +2,30 @@
 import Button from './ui/Button.astro';
 ---
 
-<section id="control-tower" class="py-20 bg-slate-950 relative overflow-hidden border-t border-slate-900">
+<section id="control-tower" class="py-24 bg-slate-950 relative overflow-hidden border-t border-slate-900">
   
+  <!-- Background Grid (Matching ServicesSection) -->
+  <div class="absolute inset-0 z-0 opacity-10 pointer-events-none">
+        <svg class="w-full h-full text-slate-700" fill="none">
+        <defs>
+            <pattern id="grid-control" width="40" height="40" patternUnits="userSpaceOnUse">
+                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="currentColor" stroke-width="0.5"/>
+            </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#grid-control)" />
+        </svg>
+  </div>
+
   <div class="container mx-auto px-6 md:px-12 relative z-10">
     
     <!-- Section Header -->
     <div class="text-center max-w-3xl mx-auto mb-16 reveal">
       <span class="font-mono text-blue-500 text-sm tracking-widest uppercase mb-4 block">Logistics Chain</span>
       <h2 class="font-montserrat font-bold text-4xl md:text-5xl mb-6 text-white">
-        Chain of Custody.
+        The Supply Chain Engine.
       </h2>
       <p class="font-poppins text-slate-400 text-lg">
-        From the factory floor in India to the crane hook in Toronto. Total control at every node.
+        Orchestrating the flow of materials from global production to local delivery. Precision, visibility, and control.
       </p>
     </div>
 
@@ -25,36 +37,39 @@ import Button from './ui/Button.astro';
              <!-- Traveling Pulse -->
              <div class="absolute top-0 left-0 h-full w-24 bg-gradient-to-r from-transparent via-blue-500 to-transparent animate-travel-right"></div>
         </div>
+        
+        <!-- Vertical Connector Line (Mobile/Tablet) -->
+        <div class="absolute lg:hidden top-0 bottom-0 left-8 w-px bg-gradient-to-b from-slate-800 via-blue-900 to-slate-800 z-0"></div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10">
 
-            <!-- STEP 1: SOURCE INSPECTION -->
-            <div class="group relative">
-                <div class="w-4 h-4 bg-slate-900 border-2 border-blue-500 rounded-full mx-auto mb-6 relative z-20 shadow-[0_0_10px_#3b82f6] lg:mb-8"></div>
+            <!-- STEP 1: SOURCE VERIFICATION -->
+            <div class="group relative pl-16 lg:pl-0">
+                <div class="absolute left-6 lg:left-1/2 lg:-translate-x-1/2 w-4 h-4 bg-slate-900 border-2 border-blue-500 rounded-full mb-6 z-20 shadow-[0_0_10px_#3b82f6] lg:relative lg:mb-8 lg:mx-auto"></div>
                 <div class="bg-slate-900/50 backdrop-blur-sm border border-slate-800 p-6 rounded-xl hover:border-blue-500/30 transition duration-300 h-full">
                     <div class="text-[10px] font-mono text-blue-400 uppercase tracking-widest mb-2">Step 01</div>
-                    <h3 class="text-lg font-bold text-white mb-2">Source Inspection</h3>
+                    <h3 class="text-lg font-bold text-white mb-2">Source Verification</h3>
                     <p class="text-sm text-slate-400 leading-relaxed">
-                        CWB-certified inspectors witness the weld on the factory floor in India. Defects caught at the source.
+                        CWB-certified inspectors witness the weld on the factory floor. Ensuring quality standards are met before shipping.
                     </p>
                 </div>
             </div>
 
             <!-- STEP 2: SECURE TRANSIT -->
-            <div class="group relative">
-                <div class="w-4 h-4 bg-slate-900 border-2 border-slate-700 rounded-full mx-auto mb-6 relative z-20 group-hover:border-blue-500 group-hover:bg-blue-500 transition duration-500 lg:mb-8"></div>
+            <div class="group relative pl-16 lg:pl-0">
+                <div class="absolute left-6 lg:left-1/2 lg:-translate-x-1/2 w-4 h-4 bg-slate-900 border-2 border-slate-700 rounded-full mb-6 z-20 group-hover:border-blue-500 group-hover:bg-blue-500 transition duration-500 lg:relative lg:mb-8 lg:mx-auto"></div>
                 <div class="bg-slate-900/50 backdrop-blur-sm border border-slate-800 p-6 rounded-xl hover:border-blue-500/30 transition duration-300 h-full">
                     <div class="text-[10px] font-mono text-slate-500 uppercase tracking-widest mb-2 group-hover:text-blue-400 transition">Step 02</div>
                     <h3 class="text-lg font-bold text-white mb-2">Secure Transit</h3>
                     <p class="text-sm text-slate-400 leading-relaxed">
-                        Live tracking of every container. We handle customs and duties so you never deal with a broker.
+                        Live tracking of every container. Seamless import and customs clearance managed entirely by us.
                     </p>
                 </div>
             </div>
 
             <!-- STEP 3: 3PL BUFFER -->
-            <div class="group relative">
-                <div class="w-4 h-4 bg-slate-900 border-2 border-slate-700 rounded-full mx-auto mb-6 relative z-20 group-hover:border-blue-500 group-hover:bg-blue-500 transition duration-500 delay-100 lg:mb-8"></div>
+            <div class="group relative pl-16 lg:pl-0">
+                <div class="absolute left-6 lg:left-1/2 lg:-translate-x-1/2 w-4 h-4 bg-slate-900 border-2 border-slate-700 rounded-full mb-6 z-20 group-hover:border-blue-500 group-hover:bg-blue-500 transition duration-500 delay-100 lg:relative lg:mb-8 lg:mx-auto"></div>
                 <div class="bg-slate-900/50 backdrop-blur-sm border border-slate-800 p-6 rounded-xl hover:border-blue-500/30 transition duration-300 h-full">
                     <div class="text-[10px] font-mono text-slate-500 uppercase tracking-widest mb-2 group-hover:text-blue-400 transition">Step 03</div>
                     <h3 class="text-lg font-bold text-white mb-2">3PL Buffer</h3>
@@ -65,8 +80,8 @@ import Button from './ui/Button.astro';
             </div>
 
             <!-- STEP 4: JIT DELIVERY -->
-            <div class="group relative">
-                <div class="w-4 h-4 bg-slate-900 border-2 border-slate-700 rounded-full mx-auto mb-6 relative z-20 group-hover:border-green-500 group-hover:bg-green-500 transition duration-500 delay-200 lg:mb-8"></div>
+            <div class="group relative pl-16 lg:pl-0">
+                <div class="absolute left-6 lg:left-1/2 lg:-translate-x-1/2 w-4 h-4 bg-slate-900 border-2 border-slate-700 rounded-full mb-6 z-20 group-hover:border-green-500 group-hover:bg-green-500 transition duration-500 delay-200 lg:relative lg:mb-8 lg:mx-auto"></div>
                 <div class="bg-slate-900/50 backdrop-blur-sm border border-slate-800 p-6 rounded-xl hover:border-green-500/30 transition duration-300 h-full">
                     <div class="text-[10px] font-mono text-slate-500 uppercase tracking-widest mb-2 group-hover:text-green-400 transition">Step 04</div>
                     <h3 class="text-lg font-bold text-white mb-2 group-hover:text-green-400 transition">JIT Delivery</h3>

@@ -1,0 +1,257 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import Button from '../components/ui/Button.astro';
+
+const equipment = [
+  {
+    category: "Laser Cutting",
+    items: [
+      { name: "Fiber Laser", spec: "6kW, 6' x 12' bed", capability: "Up to 1\" mild steel, 3/4\" stainless" },
+      { name: "Material Handling", spec: "Automated load/unload", capability: "Continuous production capability" }
+    ]
+  },
+  {
+    category: "Forming & Bending",
+    items: [
+      { name: "CNC Press Brake", spec: "250 ton, 12' bed", capability: "Complex multi-bend parts" },
+      { name: "Angle Roll", spec: "4\" x 4\" capacity", capability: "Curved structural members" },
+      { name: "Plate Roll", spec: "1/2\" x 8' capacity", capability: "Cylinders and cones" }
+    ]
+  },
+  {
+    category: "Welding",
+    items: [
+      { name: "MIG Welding", spec: "Multiple stations", capability: "Steel, stainless, aluminum" },
+      { name: "TIG Welding", spec: "AC/DC capability", capability: "Precision and exotic metals" },
+      { name: "Robotic Welding", spec: "Repeatability ±0.1mm", capability: "High-volume consistency" }
+    ]
+  },
+  {
+    category: "Finishing",
+    items: [
+      { name: "Shot Blast", spec: "8' x 8' booth", capability: "Surface prep for coating" },
+      { name: "Powder Coat Line", spec: "Partner network", capability: "Full color range, batch capability" },
+      { name: "Hot-Dip Galvanize", spec: "Partner network", capability: "Corrosion protection" }
+    ]
+  }
+];
+
+const certifications = [
+  { name: "ISO 9001:2015", status: "In Progress", description: "Quality Management System" },
+  { name: "CWB W47.1", status: "Planned", description: "Welding Certification" },
+  { name: "CSA Standards", status: "Compliant", description: "Canadian Standards Association" }
+];
+---
+
+<Layout
+  title="Capabilities | Canadian Metal Fabricators"
+  description="CMF equipment and facility capabilities. Laser cutting, CNC forming, welding, and finishing for Division 5 & 10 construction projects."
+>
+  <Navbar />
+
+  <main class="pt-20">
+    <!-- Hero -->
+    <section class="bg-slate-900 text-white py-20 px-6 md:px-20">
+      <div class="max-w-6xl mx-auto">
+        <h1 class="font-montserrat font-bold text-4xl md:text-5xl mb-6">
+          Our Capabilities
+        </h1>
+        <p class="font-poppins text-xl text-slate-300 max-w-3xl mb-8">
+          Full-service metal fabrication backed by the equipment, expertise, and partner network to deliver Division 5 & 10 projects on time and on spec.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <Button href="#equipment" variant="primary">View Equipment</Button>
+          <Button href="#contact" variant="outline">Request Quote</Button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Facility Overview -->
+    <section class="py-16 px-6 md:px-20 bg-white">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="font-montserrat font-bold text-3xl mb-6 text-slate-900">GTA Manufacturing Facility</h2>
+            <p class="font-poppins text-slate-600 mb-6">
+              Our Toronto-area facility houses the equipment and team to handle both high-volume production runs and custom one-off fabrication. When offshore shipments face delays or field conditions change, we have the local capacity to keep your project on schedule.
+            </p>
+            <ul class="space-y-3 font-poppins text-slate-700">
+              <li class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-blue-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                40,000+ sq ft manufacturing space
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-blue-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                Overhead crane capacity for heavy assemblies
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-blue-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                Dedicated staging area for project kitting
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-blue-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                Climate-controlled quality inspection area
+              </li>
+            </ul>
+          </div>
+          <div class="bg-slate-100 rounded-2xl aspect-video flex items-center justify-center">
+            <p class="text-slate-400 font-poppins">Facility photo coming soon</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Equipment Grid -->
+    <section id="equipment" class="py-16 px-6 md:px-20 bg-slate-50">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="font-montserrat font-bold text-3xl mb-4 text-slate-900">Equipment & Machinery</h2>
+        <p class="font-poppins text-slate-600 mb-12 max-w-2xl">
+          Our in-house equipment handles the majority of fabrication processes. For specialized finishing, we leverage our vetted partner network.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          {equipment.map((category) => (
+            <div class="bg-white rounded-xl p-6 border border-slate-200">
+              <h3 class="font-montserrat font-bold text-xl mb-4 text-slate-900">{category.category}</h3>
+              <div class="space-y-4">
+                {category.items.map((item) => (
+                  <div class="border-l-2 border-blue-500 pl-4">
+                    <p class="font-poppins font-semibold text-slate-800">{item.name}</p>
+                    <p class="font-poppins text-sm text-slate-500">{item.spec}</p>
+                    <p class="font-poppins text-sm text-blue-600">{item.capability}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Partner Network -->
+    <section class="py-16 px-6 md:px-20 bg-white">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="font-montserrat font-bold text-3xl mb-4 text-slate-900">Partner Network</h2>
+        <p class="font-poppins text-slate-600 mb-8 max-w-2xl">
+          We extend our capabilities through a vetted network of specialized partners across the GTA and Ontario.
+        </p>
+
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="bg-slate-50 rounded-xl p-6">
+            <h3 class="font-montserrat font-bold text-lg mb-2 text-slate-900">Finishing Partners</h3>
+            <ul class="font-poppins text-slate-600 space-y-1 text-sm">
+              <li>• Powder coating (full color range)</li>
+              <li>• Hot-dip galvanizing</li>
+              <li>• Electroplating</li>
+              <li>• Anodizing (aluminum)</li>
+            </ul>
+          </div>
+          <div class="bg-slate-50 rounded-xl p-6">
+            <h3 class="font-montserrat font-bold text-lg mb-2 text-slate-900">Specialty Processes</h3>
+            <ul class="font-poppins text-slate-600 space-y-1 text-sm">
+              <li>• Heavy plate rolling</li>
+              <li>• 5-axis CNC machining</li>
+              <li>• Waterjet cutting</li>
+              <li>• Laser tube cutting</li>
+            </ul>
+          </div>
+          <div class="bg-slate-50 rounded-xl p-6">
+            <h3 class="font-montserrat font-bold text-lg mb-2 text-slate-900">Logistics Partners</h3>
+            <ul class="font-poppins text-slate-600 space-y-1 text-sm">
+              <li>• 3PL overflow storage (GTA)</li>
+              <li>• Flatbed & crane truck delivery</li>
+              <li>• Cross-border logistics</li>
+              <li>• Offshore freight forwarding</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Materials -->
+    <section class="py-16 px-6 md:px-20 bg-slate-50">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="font-montserrat font-bold text-3xl mb-8 text-slate-900">Materials We Work With</h2>
+
+        <div class="grid md:grid-cols-4 gap-6">
+          <div class="text-center">
+            <div class="w-16 h-16 bg-slate-200 rounded-full mx-auto mb-3 flex items-center justify-center">
+              <span class="text-2xl">🔩</span>
+            </div>
+            <h3 class="font-montserrat font-bold text-slate-900">Mild Steel</h3>
+            <p class="font-poppins text-sm text-slate-500">A36, A572, A500</p>
+          </div>
+          <div class="text-center">
+            <div class="w-16 h-16 bg-slate-200 rounded-full mx-auto mb-3 flex items-center justify-center">
+              <span class="text-2xl">✨</span>
+            </div>
+            <h3 class="font-montserrat font-bold text-slate-900">Stainless Steel</h3>
+            <p class="font-poppins text-sm text-slate-500">304, 316, 430</p>
+          </div>
+          <div class="text-center">
+            <div class="w-16 h-16 bg-slate-200 rounded-full mx-auto mb-3 flex items-center justify-center">
+              <span class="text-2xl">🪶</span>
+            </div>
+            <h3 class="font-montserrat font-bold text-slate-900">Aluminum</h3>
+            <p class="font-poppins text-sm text-slate-500">5052, 6061, 6063</p>
+          </div>
+          <div class="text-center">
+            <div class="w-16 h-16 bg-slate-200 rounded-full mx-auto mb-3 flex items-center justify-center">
+              <span class="text-2xl">🔧</span>
+            </div>
+            <h3 class="font-montserrat font-bold text-slate-900">Specialty</h3>
+            <p class="font-poppins text-sm text-slate-500">Corten, Brass, Bronze</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications -->
+    <section class="py-16 px-6 md:px-20 bg-white">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="font-montserrat font-bold text-3xl mb-8 text-slate-900">Standards & Certifications</h2>
+
+        <div class="grid md:grid-cols-3 gap-6">
+          {certifications.map((cert) => (
+            <div class="border border-slate-200 rounded-xl p-6">
+              <div class="flex items-center justify-between mb-2">
+                <h3 class="font-montserrat font-bold text-lg text-slate-900">{cert.name}</h3>
+                <span class={`text-xs font-poppins px-2 py-1 rounded ${
+                  cert.status === 'Compliant' ? 'bg-green-100 text-green-700' :
+                  cert.status === 'In Progress' ? 'bg-yellow-100 text-yellow-700' :
+                  'bg-slate-100 text-slate-600'
+                }`}>{cert.status}</span>
+              </div>
+              <p class="font-poppins text-sm text-slate-600">{cert.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="contact" class="py-16 px-6 md:px-20 bg-blue-600 text-white">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="font-montserrat font-bold text-3xl mb-4">Ready to Discuss Your Project?</h2>
+        <p class="font-poppins text-blue-100 mb-8 max-w-2xl mx-auto">
+          Send us your drawings and specifications. We'll review your requirements and provide a detailed quote covering both offshore and domestic fabrication options.
+        </p>
+        <Button href="/#contact" variant="outline" class="border-white text-white hover:bg-white hover:text-blue-600">
+          Request a Quote
+        </Button>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

@@ -3,7 +3,7 @@ import ServiceCard from './ui/ServiceCard.astro';
 
 const capabilities = [
   {
-    title: "Design Engineering",
+    title: "Value Engineering",
     description: "DFM analysis and CAD modeling to optimize parts for mass production.",
     iconPath: "M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z", // Cog/Drafting
     capacity: "SolidWorks / AutoCAD"
@@ -27,8 +27,8 @@ const capabilities = [
     capacity: "7-Axis Press Brakes"
   },
   {
-    title: "CWB Welding",
-    description: "CWB W47.1 certified MIG/TIG welders and robotic cells for structural integrity.",
+    title: "Certified Welding (CWB/AWS)",
+    description: "Certified MIG/TIG welding for both high-strength structural and precision cosmetic applications.",
     iconPath: "M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z", // Flame
     capacity: "W47.1 Certified"
   },
@@ -47,8 +47,13 @@ const capabilities = [
 ];
 ---
 
-<section id="services" class="py-24 bg-slate-950 border-t border-slate-900 relative overflow-hidden">
+<section id="services" class="pt-32 pb-24 bg-slate-950 border-t border-slate-900 relative overflow-hidden">
   
+  <!-- Receiving Connector Node (Sitting on Top Border) -->
+  <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 bg-slate-900 border border-slate-700 rounded-full z-20 flex items-center justify-center shadow-[0_0_10px_rgba(0,0,0,0.5)]">
+    <div class="w-1 h-1 bg-slate-500 rounded-full"></div>
+  </div>
+
   <!-- Background Grid -->
   <div class="absolute inset-0 z-0 opacity-10 pointer-events-none">
         <svg class="w-full h-full text-slate-700" fill="none">
@@ -62,12 +67,12 @@ const capabilities = [
   </div>
 
   <div class="container mx-auto px-6 md:px-12 relative z-10">
-    
+
     <div class="text-center max-w-4xl mx-auto mb-20 reveal">
-      <span class="font-mono text-blue-500 text-sm tracking-widest uppercase mb-4 block">Process Menu</span>
-      <h2 class="font-montserrat font-bold text-4xl mb-6 text-white">Technical Capabilities.</h2>
+      <span class="font-mono text-blue-500 text-sm tracking-widest uppercase mb-4 block">Integrated Capabilities</span>
+      <h2 class="font-montserrat font-bold text-4xl mb-6 text-white">Production Ecosystem.</h2>
       <p class="text-slate-400 text-lg">
-        From raw sheet to finished assembly. Whether it's 10,000 units from India or 50 custom brackets from Toronto, we have the machine for the job.
+        Scalable manufacturing solutions designed for complexity. We seamlessly integrate high-volume offshore production with rapid domestic finishing to deliver the optimal balance of cost and speed.
       </p>
     </div>
 

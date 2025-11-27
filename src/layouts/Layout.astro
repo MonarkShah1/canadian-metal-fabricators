@@ -56,15 +56,36 @@ const {
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Organization",
+        "@type": "ProfessionalService",
+        "@id": "https://cmfab.ca/#organization",
         "name": "Canadian Metal Fabricators",
+        "alternateName": "CMF",
         "url": "https://cmfab.ca",
-        "logo": "https://cmfab.ca/logo.png",
+        "logo": "https://cmfab.ca/images/logo.png",
+        "description": "Construction metal supply chain partner specializing in Division 5 & 10 fabrication. Offshore economics with domestic guarantee for general contractors.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Toronto",
+          "addressRegion": "ON",
+          "addressCountry": "CA"
+        },
+        "areaServed": [
+          { "@type": "Country", "name": "Canada" }
+        ],
+        "knowsAbout": [
+          "Metal Fabrication",
+          "Division 5 Miscellaneous Metals",
+          "Division 10 Specialties",
+          "Construction Supply Chain Management",
+          "JIT Delivery",
+          "Structural Steel Fabrication"
+        ],
         "contactPoint": {
           "@type": "ContactPoint",
           "telephone": "+1-416-555-0123",
           "contactType": "sales",
-          "areaServed": "CA"
+          "areaServed": "CA",
+          "availableLanguage": ["English", "French"]
         }
       }
     </script>
