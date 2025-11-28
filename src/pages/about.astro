@@ -1,0 +1,236 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import Button from '../components/ui/Button.astro';
+---
+
+<Layout
+  title="About CMF | Canadian Metal Fabricators"
+  description="Why we built a hybrid metal fabrication model. Offshore economics with domestic guarantee for Ontario construction projects."
+>
+  <Navbar />
+
+  <main class="pt-20">
+    <!-- Hero -->
+    <section class="bg-slate-900 text-white py-20 px-6 md:px-20">
+      <div class="max-w-4xl mx-auto">
+        <p class="font-poppins text-blue-400 uppercase tracking-wider text-sm mb-4">About Canadian Metal Fabricators</p>
+        <h1 class="font-montserrat font-bold text-4xl md:text-5xl mb-6">
+          We Don't Just Fabricate Metal.<br/>
+          <span class="text-blue-400">We Manage Risk.</span>
+        </h1>
+        <p class="font-poppins text-xl text-slate-300 max-w-3xl">
+          CMF exists to solve a problem every construction PM knows too well: the tradeoff between offshore savings and schedule certainty.
+        </p>
+      </div>
+    </section>
+
+    <!-- The Problem -->
+    <section class="py-16 px-6 md:px-20 bg-white">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="font-montserrat font-bold text-3xl mb-6 text-slate-900">The Problem We Solve</h2>
+
+        <div class="prose prose-lg max-w-none font-poppins text-slate-600">
+          <p>
+            If you're a Project Manager on a high-rise or commercial build, you've faced this decision:
+          </p>
+
+          <div class="bg-slate-50 border-l-4 border-red-500 p-6 my-8 not-prose">
+            <p class="font-poppins text-slate-700 mb-4">
+              <strong>Option A: Go offshore.</strong> Save 30-40% on Division 5 items. But accept the risk that a shipment arrives late, arrives wrong, or doesn't arrive at all. When the crane is scheduled and the site is waiting, that 30% savings disappears into liquidated damages.
+            </p>
+            <p class="font-poppins text-slate-700">
+              <strong>Option B: Go local.</strong> Pay premium pricing for domestic fabrication. Get the schedule certainty, but blow the budget. Explain to ownership why the metal package came in 40% over estimate.
+            </p>
+          </div>
+
+          <p>
+            Neither option is good. So we built a third way.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Hybrid Model -->
+    <section class="py-16 px-6 md:px-20 bg-slate-50">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="font-montserrat font-bold text-3xl mb-6 text-slate-900">The Hybrid Model</h2>
+
+        <p class="font-poppins text-slate-600 text-lg mb-10">
+          We structure every project to capture offshore economics while maintaining domestic schedule protection.
+        </p>
+
+        <div class="space-y-8">
+          <!-- Layer 1 -->
+          <div class="bg-white rounded-xl p-8 border border-slate-200">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <span class="text-2xl">🌏</span>
+              </div>
+              <div>
+                <h3 class="font-montserrat font-bold text-xl text-slate-900 mb-2">Layer 1: Global Volumetrics</h3>
+                <p class="font-poppins text-slate-600 mb-4">
+                  Standardized, high-quantity items sourced from our overseas manufacturing partners. Standard guardrails, repetitive stair stringers, stock bollards—items where specification is clear and volume justifies the logistics.
+                </p>
+                <p class="font-poppins text-blue-600 font-medium">
+                  Result: 30-40% cost savings on commodity items.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Layer 2 -->
+          <div class="bg-white rounded-xl p-8 border border-slate-200">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <span class="text-2xl">🔍</span>
+              </div>
+              <div>
+                <h3 class="font-montserrat font-bold text-xl text-slate-900 mb-2">Layer 2: Source Inspection</h3>
+                <p class="font-poppins text-slate-600 mb-4">
+                  Nothing ships blind. Our inspection network verifies quality at the source—before items get on a boat. Dimensional checks, weld inspection, finish verification. Problems get caught overseas, not on your job site.
+                </p>
+                <p class="font-poppins text-green-600 font-medium">
+                  Result: Offshore pricing with domestic quality standards.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Layer 3 -->
+          <div class="bg-white rounded-xl p-8 border border-slate-200">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <span class="text-2xl">🏭</span>
+              </div>
+              <div>
+                <h3 class="font-montserrat font-bold text-xl text-slate-900 mb-2">Layer 3: Domestic Backstop</h3>
+                <p class="font-poppins text-slate-600 mb-4">
+                  Our GTA facility stands ready. Custom items, urgent modifications, field-measure adjustments, and "rescue" fabrication when offshore timelines slip. When a boat is delayed or site conditions change, we manufacture it here. Tonight if necessary.
+                </p>
+                <p class="font-poppins text-yellow-600 font-medium">
+                  Result: Your schedule never slips.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Pitch -->
+    <section class="py-16 px-6 md:px-20 bg-white">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="font-montserrat font-bold text-3xl mb-10 text-slate-900">What This Means For You</h2>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="border border-slate-200 rounded-xl p-6">
+            <h3 class="font-montserrat font-bold text-lg text-slate-900 mb-3">You're Not Buying From India</h3>
+            <p class="font-poppins text-slate-600">
+              You're buying from CMF in Toronto. We use global supply chains to save you money, but if a port strikes or a shipment is delayed, we manufacture it right here. Your PO is with us. Your accountability is with us.
+            </p>
+          </div>
+
+          <div class="border border-slate-200 rounded-xl p-6">
+            <h3 class="font-montserrat font-bold text-lg text-slate-900 mb-3">One PO, Complete Coverage</h3>
+            <p class="font-poppins text-slate-600">
+              Stop managing 10 different fab shops for one project. We handle the entire Division 5 package—offshore sourcing, domestic custom work, finishing, delivery—under one contract, one point of contact.
+            </p>
+          </div>
+
+          <div class="border border-slate-200 rounded-xl p-6">
+            <h3 class="font-montserrat font-bold text-lg text-slate-900 mb-3">JIT Without the Inventory Risk</h3>
+            <p class="font-poppins text-slate-600">
+              No laydown space downtown? We bring material in early, store it in our yard, and deliver piece-by-piece when the crane is ready. You don't sit on inventory. We do.
+            </p>
+          </div>
+
+          <div class="border border-slate-200 rounded-xl p-6">
+            <h3 class="font-montserrat font-bold text-lg text-slate-900 mb-3">Budget AND Schedule</h3>
+            <p class="font-poppins text-slate-600">
+              Our hybrid quotes show exactly where savings come from and where schedule protection is built in. You can explain the value to ownership—and sleep at night knowing the critical path is protected.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Who We Work With -->
+    <section class="py-16 px-6 md:px-20 bg-slate-50">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="font-montserrat font-bold text-3xl mb-6 text-slate-900">Who We Work With</h2>
+
+        <div class="prose prose-lg max-w-none font-poppins text-slate-600">
+          <p>
+            CMF partners with mid-to-large general contractors and developers working on complex construction projects across Ontario and Eastern Canada:
+          </p>
+
+          <ul>
+            <li><strong>High-Rise Residential:</strong> Towers where Division 5 items interface with dozens of trades and tight schedules</li>
+            <li><strong>Commercial Complexes:</strong> Office, retail, and mixed-use where aesthetics and function both matter</li>
+            <li><strong>Institutional:</strong> Healthcare, education, and government projects with strict compliance requirements</li>
+            <li><strong>Infrastructure:</strong> Transit, utilities, and public works where durability is paramount</li>
+          </ul>
+
+          <p>
+            We're built for projects where the metal package is complex enough to matter, and the schedule is tight enough that delays hurt.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Who We're Not For -->
+    <section class="py-16 px-6 md:px-20 bg-white">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="font-montserrat font-bold text-3xl mb-6 text-slate-900">Who We're Not For</h2>
+
+        <p class="font-poppins text-slate-600 mb-6">
+          We're honest about fit. CMF isn't the right partner for everyone:
+        </p>
+
+        <div class="space-y-4">
+          <div class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-red-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+            <p class="font-poppins text-slate-600">
+              <strong>One-off residential:</strong> "I need a railing for my deck" — we're set up for commercial scale, not homeowner projects.
+            </p>
+          </div>
+          <div class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-red-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+            <p class="font-poppins text-slate-600">
+              <strong>Pure commodity buyers:</strong> If you're only buying raw steel beams at the lowest penny per pound, we can't compete with steel service centers.
+            </p>
+          </div>
+          <div class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-red-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+            <p class="font-poppins text-slate-600">
+              <strong>Impossible timelines:</strong> Offshore pricing with 2-week delivery isn't realistic. We're honest about "Fast, Cheap, Good—pick two."
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 px-6 md:px-20 bg-blue-600 text-white">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="font-montserrat font-bold text-3xl mb-4">Ready to Talk?</h2>
+        <p class="font-poppins text-blue-100 mb-8 max-w-2xl mx-auto">
+          Send us your Division 5 or 10 package. We'll show you how the hybrid model breaks down for your specific project.
+        </p>
+        <Button href="/#contact" variant="outline" class="border-white text-white hover:bg-white hover:text-blue-600">
+          Request a Quote
+        </Button>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

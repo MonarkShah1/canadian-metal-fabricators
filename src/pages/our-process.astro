@@ -1,0 +1,325 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import Button from '../components/ui/Button.astro';
+
+const processSteps = [
+  {
+    number: "01",
+    title: "Specification Review",
+    duration: "1-2 days",
+    description: "We review your Division 5/10 spec package and drawings to understand the full scope.",
+    details: [
+      "Identify all metal items in the package",
+      "Classify items: offshore candidates vs. domestic requirements",
+      "Flag items with tight tolerances or complex geometry",
+      "Note finish, coating, and certification requirements"
+    ]
+  },
+  {
+    number: "02",
+    title: "Hybrid Bid Development",
+    duration: "3-5 days",
+    description: "We structure a quote that optimizes cost and schedule across our hybrid network.",
+    details: [
+      "Price offshore items with landed cost calculation",
+      "Price domestic items from our GTA facility",
+      "Include source inspection and QC costs",
+      "Build in logistics and delivery staging"
+    ]
+  },
+  {
+    number: "03",
+    title: "Award & Submittals",
+    duration: "Per project timeline",
+    description: "Upon award, we mobilize production and prepare submittals for approval.",
+    details: [
+      "Shop drawings for all fabricated items",
+      "Material certifications and test reports",
+      "Finish samples as required",
+      "Production schedule aligned to your milestones"
+    ]
+  },
+  {
+    number: "04",
+    title: "Production & QC",
+    duration: "Per item lead time",
+    description: "Items are fabricated across our hybrid network with quality verification at each stage.",
+    details: [
+      "Offshore: Fabrication with source inspection",
+      "Domestic: In-house production for custom/urgent items",
+      "Finishing: Powder coat, galvanize, etc. via partner network",
+      "Documentation: Photos, measurements, inspection records"
+    ]
+  },
+  {
+    number: "05",
+    title: "Staging & Delivery",
+    duration: "JIT to your schedule",
+    description: "Completed items are staged in our yard and delivered sequence-matched to your installation.",
+    details: [
+      "Inventory at our GTA staging facility",
+      "Labeling and organization by installation sequence",
+      "Delivery coordination with your site schedule",
+      "Just-in-time release as crane/crew availability allows"
+    ]
+  }
+];
+---
+
+<Layout
+  title="Our Process | Canadian Metal Fabricators"
+  description="How the CMF hybrid model works—from RFQ to site delivery. Offshore economics, source inspection, and domestic backstop explained."
+>
+  <Navbar />
+
+  <main class="pt-20">
+    <!-- Hero -->
+    <section class="bg-slate-900 text-white py-20 px-6 md:px-20">
+      <div class="max-w-4xl mx-auto">
+        <p class="font-poppins text-blue-400 uppercase tracking-wider text-sm mb-4">How We Work</p>
+        <h1 class="font-montserrat font-bold text-4xl md:text-5xl mb-6">
+          The Hybrid Process:<br/>
+          <span class="text-blue-400">From RFQ to Site Delivery</span>
+        </h1>
+        <p class="font-poppins text-xl text-slate-300 max-w-3xl">
+          A transparent walkthrough of how CMF manages your Division 5 & 10 package—balancing offshore economics with domestic schedule protection.
+        </p>
+      </div>
+    </section>
+
+    <!-- The Hybrid Stack Visual -->
+    <section class="py-16 px-6 md:px-20 bg-white">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="font-montserrat font-bold text-3xl mb-4 text-slate-900">The Hybrid Shield</h2>
+        <p class="font-poppins text-slate-600 mb-10 max-w-2xl">
+          Every CMF project is structured in three layers that work together to deliver cost savings without schedule risk.
+        </p>
+
+        <div class="relative">
+          <!-- Visual Stack -->
+          <div class="space-y-4">
+            <!-- Layer 3 - Top -->
+            <div class="bg-gradient-to-r from-yellow-500 to-yellow-600 rounded-xl p-6 text-white">
+              <div class="flex items-center gap-4">
+                <div class="w-16 h-16 bg-white/20 rounded-lg flex items-center justify-center">
+                  <span class="text-3xl">🏭</span>
+                </div>
+                <div>
+                  <p class="text-yellow-100 text-sm uppercase tracking-wider">Layer 3</p>
+                  <h3 class="font-montserrat font-bold text-xl">Domestic Backstop</h3>
+                  <p class="text-yellow-100 mt-1">GTA facility for custom, urgent, and rescue fabrication</p>
+                </div>
+                <div class="ml-auto text-right">
+                  <p class="font-montserrat font-bold text-2xl">Schedule</p>
+                  <p class="text-yellow-100 text-sm">Protection</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Layer 2 - Middle -->
+            <div class="bg-gradient-to-r from-green-500 to-green-600 rounded-xl p-6 text-white">
+              <div class="flex items-center gap-4">
+                <div class="w-16 h-16 bg-white/20 rounded-lg flex items-center justify-center">
+                  <span class="text-3xl">🔍</span>
+                </div>
+                <div>
+                  <p class="text-green-100 text-sm uppercase tracking-wider">Layer 2</p>
+                  <h3 class="font-montserrat font-bold text-xl">Source Inspection</h3>
+                  <p class="text-green-100 mt-1">Quality verification at overseas factories before shipping</p>
+                </div>
+                <div class="ml-auto text-right">
+                  <p class="font-montserrat font-bold text-2xl">Quality</p>
+                  <p class="text-green-100 text-sm">Firewall</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Layer 1 - Bottom -->
+            <div class="bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl p-6 text-white">
+              <div class="flex items-center gap-4">
+                <div class="w-16 h-16 bg-white/20 rounded-lg flex items-center justify-center">
+                  <span class="text-3xl">🌏</span>
+                </div>
+                <div>
+                  <p class="text-blue-100 text-sm uppercase tracking-wider">Layer 1</p>
+                  <h3 class="font-montserrat font-bold text-xl">Global Volumetrics</h3>
+                  <p class="text-blue-100 mt-1">Offshore fabrication for high-volume standard items</p>
+                </div>
+                <div class="ml-auto text-right">
+                  <p class="font-montserrat font-bold text-2xl">30-40%</p>
+                  <p class="text-blue-100 text-sm">Cost Savings</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Timeline -->
+    <section class="py-16 px-6 md:px-20 bg-slate-50">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="font-montserrat font-bold text-3xl mb-4 text-slate-900">Project Timeline</h2>
+        <p class="font-poppins text-slate-600 mb-12 max-w-2xl">
+          From your first inquiry to site delivery, here's how we manage your project through the hybrid process.
+        </p>
+
+        <div class="space-y-8">
+          {processSteps.map((step, index) => (
+            <div class="relative">
+              {/* Connector line */}
+              {index < processSteps.length - 1 && (
+                <div class="absolute left-6 top-20 w-0.5 h-full bg-slate-200 -z-10"></div>
+              )}
+
+              <div class="flex gap-6">
+                {/* Number badge */}
+                <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
+                  <span class="font-montserrat font-bold text-white">{step.number}</span>
+                </div>
+
+                {/* Content */}
+                <div class="flex-1 bg-white rounded-xl p-6 border border-slate-200">
+                  <div class="flex flex-wrap items-start justify-between gap-4 mb-4">
+                    <div>
+                      <h3 class="font-montserrat font-bold text-xl text-slate-900">{step.title}</h3>
+                      <p class="font-poppins text-slate-600 mt-1">{step.description}</p>
+                    </div>
+                    <span class="px-3 py-1 bg-slate-100 rounded-full font-poppins text-sm text-slate-600">
+                      {step.duration}
+                    </span>
+                  </div>
+
+                  <ul class="grid md:grid-cols-2 gap-2">
+                    {step.details.map((detail) => (
+                      <li class="flex items-start gap-2 font-poppins text-sm text-slate-600">
+                        <svg class="w-4 h-4 text-blue-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        {detail}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- What Offshore vs Domestic -->
+    <section class="py-16 px-6 md:px-20 bg-white">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="font-montserrat font-bold text-3xl mb-4 text-slate-900">Offshore vs. Domestic: How We Decide</h2>
+        <p class="font-poppins text-slate-600 mb-10 max-w-2xl">
+          Not everything should go offshore. Not everything needs to stay local. Here's how we classify items for optimal cost and schedule balance.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Offshore Column -->
+          <div class="bg-blue-50 rounded-xl p-6 border border-blue-100">
+            <h3 class="font-montserrat font-bold text-xl text-blue-900 mb-4 flex items-center gap-2">
+              <span class="text-2xl">🌏</span>
+              Offshore Candidates
+            </h3>
+            <ul class="space-y-3">
+              <li class="font-poppins text-slate-700 flex items-start gap-2">
+                <span class="text-blue-500 mt-1">✓</span>
+                <span><strong>High quantity:</strong> Standard railings, repetitive brackets, stock items</span>
+              </li>
+              <li class="font-poppins text-slate-700 flex items-start gap-2">
+                <span class="text-blue-500 mt-1">✓</span>
+                <span><strong>Clear specification:</strong> Dimensions and tolerances well-defined</span>
+              </li>
+              <li class="font-poppins text-slate-700 flex items-start gap-2">
+                <span class="text-blue-500 mt-1">✓</span>
+                <span><strong>Long lead time available:</strong> 8-12 weeks to delivery</span>
+              </li>
+              <li class="font-poppins text-slate-700 flex items-start gap-2">
+                <span class="text-blue-500 mt-1">✓</span>
+                <span><strong>Simple geometry:</strong> Straightforward fabrication, minimal complexity</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Domestic Column -->
+          <div class="bg-yellow-50 rounded-xl p-6 border border-yellow-100">
+            <h3 class="font-montserrat font-bold text-xl text-yellow-900 mb-4 flex items-center gap-2">
+              <span class="text-2xl">🏭</span>
+              Domestic Requirements
+            </h3>
+            <ul class="space-y-3">
+              <li class="font-poppins text-slate-700 flex items-start gap-2">
+                <span class="text-yellow-600 mt-1">✓</span>
+                <span><strong>Custom or one-off:</strong> Unique items, field-specific dimensions</span>
+              </li>
+              <li class="font-poppins text-slate-700 flex items-start gap-2">
+                <span class="text-yellow-600 mt-1">✓</span>
+                <span><strong>Urgent timeline:</strong> Less than 4-6 weeks to need date</span>
+              </li>
+              <li class="font-poppins text-slate-700 flex items-start gap-2">
+                <span class="text-yellow-600 mt-1">✓</span>
+                <span><strong>Complex geometry:</strong> Tight tolerances, multiple interfaces</span>
+              </li>
+              <li class="font-poppins text-slate-700 flex items-start gap-2">
+                <span class="text-yellow-600 mt-1">✓</span>
+                <span><strong>Field-measure dependent:</strong> Can't finalize until site conditions known</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Communication -->
+    <section class="py-16 px-6 md:px-20 bg-slate-50">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="font-montserrat font-bold text-3xl mb-4 text-slate-900">Project Communication</h2>
+        <p class="font-poppins text-slate-600 mb-10 max-w-2xl">
+          You'll never wonder where things stand. Here's how we keep you informed throughout the project.
+        </p>
+
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="bg-white rounded-xl p-6 border border-slate-200">
+            <h3 class="font-montserrat font-bold text-lg text-slate-900 mb-3">Dedicated Contact</h3>
+            <p class="font-poppins text-slate-600 text-sm">
+              One project coordinator who knows your job. Direct phone and email. No call center runaround.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 border border-slate-200">
+            <h3 class="font-montserrat font-bold text-lg text-slate-900 mb-3">Production Updates</h3>
+            <p class="font-poppins text-slate-600 text-sm">
+              Regular status updates on fabrication progress—offshore and domestic. Photos of completed items before shipping.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 border border-slate-200">
+            <h3 class="font-montserrat font-bold text-lg text-slate-900 mb-3">Delivery Coordination</h3>
+            <p class="font-poppins text-slate-600 text-sm">
+              Advance notice of deliveries. Sequence sheets showing what's on each truck. Flexibility to adjust to your site conditions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 px-6 md:px-20 bg-blue-600 text-white">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="font-montserrat font-bold text-3xl mb-4">Ready to See the Hybrid Model in Action?</h2>
+        <p class="font-poppins text-blue-100 mb-8 max-w-2xl mx-auto">
+          Send us your spec package. We'll walk through exactly how your project would flow through our hybrid process—with a clear breakdown of offshore vs. domestic allocation.
+        </p>
+        <Button href="/#contact" variant="outline" class="border-white text-white hover:bg-white hover:text-blue-600">
+          Request a Quote
+        </Button>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

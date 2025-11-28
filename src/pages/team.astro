@@ -1,0 +1,204 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import Button from '../components/ui/Button.astro';
+
+// Team members - UPDATE WITH REAL INFO
+const leadership = [
+  {
+    name: "[Founder Name]",
+    role: "Founder & CEO",
+    bio: "With [X] years in construction and metal fabrication, [Name] founded CMF to solve the offshore vs. local tradeoff that frustrated project managers throughout their career. Prior experience includes [relevant background].",
+    image: null, // Add real photo path
+    linkedin: null
+  },
+  {
+    name: "[Operations Lead]",
+    role: "Operations Director",
+    bio: "Oversees production, quality, and logistics across our domestic facility and partner network. Background in [manufacturing/supply chain/construction].",
+    image: null,
+    linkedin: null
+  }
+];
+
+const expertise = [
+  {
+    area: "Construction Industry",
+    years: "XX+",
+    description: "Combined years working with general contractors and developers"
+  },
+  {
+    area: "Metal Fabrication",
+    years: "XX+",
+    description: "Combined years in laser cutting, forming, and welding"
+  },
+  {
+    area: "Supply Chain",
+    years: "XX+",
+    description: "Combined years managing offshore sourcing and logistics"
+  }
+];
+---
+
+<Layout
+  title="Our Team | Canadian Metal Fabricators"
+  description="Meet the team behind CMF. Construction industry veterans building a better model for metal fabrication."
+>
+  <Navbar />
+
+  <main class="pt-20">
+    <!-- Hero -->
+    <section class="bg-slate-900 text-white py-20 px-6 md:px-20">
+      <div class="max-w-4xl mx-auto">
+        <p class="font-poppins text-blue-400 uppercase tracking-wider text-sm mb-4">Our Team</p>
+        <h1 class="font-montserrat font-bold text-4xl md:text-5xl mb-6">
+          Construction People<br/>
+          <span class="text-blue-400">Building for Construction People</span>
+        </h1>
+        <p class="font-poppins text-xl text-slate-300 max-w-3xl">
+          CMF was founded by people who've lived the pain of construction metal procurement. We built this company because we knew there had to be a better way.
+        </p>
+      </div>
+    </section>
+
+    <!-- Leadership -->
+    <section class="py-16 px-6 md:px-20 bg-white">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="font-montserrat font-bold text-3xl mb-10 text-slate-900">Leadership</h2>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          {leadership.map((person) => (
+            <div class="bg-slate-50 rounded-xl p-8">
+              <div class="flex items-start gap-6">
+                <div class="w-24 h-24 bg-slate-200 rounded-xl flex-shrink-0 flex items-center justify-center">
+                  {person.image ? (
+                    <img src={person.image} alt={person.name} class="w-full h-full object-cover rounded-xl" />
+                  ) : (
+                    <svg class="w-12 h-12 text-slate-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path>
+                    </svg>
+                  )}
+                </div>
+                <div>
+                  <h3 class="font-montserrat font-bold text-xl text-slate-900">{person.name}</h3>
+                  <p class="font-poppins text-blue-600 mb-3">{person.role}</p>
+                  <p class="font-poppins text-slate-600 text-sm">{person.bio}</p>
+                  {person.linkedin && (
+                    <a href={person.linkedin} class="inline-flex items-center gap-2 mt-3 text-sm font-poppins text-blue-600 hover:text-blue-800">
+                      <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                      </svg>
+                      LinkedIn
+                    </a>
+                  )}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div class="mt-8 p-6 bg-blue-50 rounded-xl border border-blue-100">
+          <p class="font-poppins text-blue-800 text-sm">
+            <strong>Note:</strong> Update this section with real team photos and bios. Real people with real credentials build trust with potential customers.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Expertise -->
+    <section class="py-16 px-6 md:px-20 bg-slate-50">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="font-montserrat font-bold text-3xl mb-10 text-slate-900">Our Expertise</h2>
+
+        <div class="grid md:grid-cols-3 gap-6">
+          {expertise.map((item) => (
+            <div class="bg-white rounded-xl p-6 text-center border border-slate-200">
+              <p class="font-montserrat font-bold text-4xl text-blue-600 mb-2">{item.years}</p>
+              <p class="font-poppins text-sm text-slate-500 uppercase tracking-wider mb-2">Years</p>
+              <h3 class="font-montserrat font-bold text-lg text-slate-900 mb-2">{item.area}</h3>
+              <p class="font-poppins text-sm text-slate-600">{item.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Why We Built CMF -->
+    <section class="py-16 px-6 md:px-20 bg-white">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="font-montserrat font-bold text-3xl mb-6 text-slate-900">Why We Built CMF</h2>
+
+        <div class="prose prose-lg max-w-none font-poppins text-slate-600">
+          <p>
+            We've been on the other side of the table. We've been the PM explaining to ownership why the metal package is late. We've been the estimator watching margins evaporate because the "cheap" offshore option turned expensive. We've been the site super waiting for a delivery that didn't come.
+          </p>
+
+          <p>
+            The construction metal supply chain has a fundamental problem: offshore fabrication saves money, but introduces risk. Domestic fabrication protects the schedule, but kills the budget. Every PM is forced to choose between cost and certainty.
+          </p>
+
+          <p>
+            We built CMF because we knew both options could coexist. Offshore for what makes sense offshore. Domestic for what needs to be local. A quality firewall in between. And a team that understands construction timelines aren't suggestions—they're commitments with real financial consequences.
+          </p>
+
+          <p>
+            That's the hybrid model. And it's what CMF delivers on every project.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Values -->
+    <section class="py-16 px-6 md:px-20 bg-slate-50">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="font-montserrat font-bold text-3xl mb-10 text-slate-900">How We Work</h2>
+
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="bg-white rounded-xl p-6 border border-slate-200">
+            <h3 class="font-montserrat font-bold text-lg text-slate-900 mb-3">Transparency First</h3>
+            <p class="font-poppins text-slate-600">
+              Our quotes show exactly what's offshore vs. domestic, where savings come from, and where risk is mitigated. No surprises. No games.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 border border-slate-200">
+            <h3 class="font-montserrat font-bold text-lg text-slate-900 mb-3">Schedule Is Sacred</h3>
+            <p class="font-poppins text-slate-600">
+              We know what liquidated damages mean. We know what a missed crane window costs. We build our model around protecting your schedule—not just hoping it works out.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 border border-slate-200">
+            <h3 class="font-montserrat font-bold text-lg text-slate-900 mb-3">Single Accountability</h3>
+            <p class="font-poppins text-slate-600">
+              Whether an item comes from overseas or our GTA facility, your contract is with CMF. One point of contact. One company responsible.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 border border-slate-200">
+            <h3 class="font-montserrat font-bold text-lg text-slate-900 mb-3">Construction Fluency</h3>
+            <p class="font-poppins text-slate-600">
+              We speak your language. Submittals, RFIs, change orders, site conditions—we've lived it. Communication is clear, expectations are aligned.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 px-6 md:px-20 bg-blue-600 text-white">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="font-montserrat font-bold text-3xl mb-4">Let's Talk About Your Project</h2>
+        <p class="font-poppins text-blue-100 mb-8 max-w-2xl mx-auto">
+          We'd love to learn about what you're building and show you how CMF can help.
+        </p>
+        <Button href="/#contact" variant="outline" class="border-white text-white hover:bg-white hover:text-blue-600">
+          Get In Touch
+        </Button>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
